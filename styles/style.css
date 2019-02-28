@@ -53,7 +53,7 @@ label {
   color: #7F7E7E;
 }
 
-input {
+input[type=text], input[type=email] {
   background-color: rgba(240, 240, 240, 0.3);
   border: 1px solid rgba(119, 119, 119, 0.3);
   border-radius: 3px;
@@ -61,6 +61,26 @@ input {
   padding: 9px 0px 9px 5px;
   color: #777;
   min-width: 250px;
+}
+
+input[type=text]::-webkit-input-placeholder, input[type=email]::-webkit-input-placeholder {
+  color: #777;
+  opacity: 1;
+}
+
+input[type=text]:-ms-input-placeholder, input[type=email]:-ms-input-placeholder {
+  color: #777;
+  opacity: 1;
+}
+
+input[type=text]::-ms-input-placeholder, input[type=email]::-ms-input-placeholder {
+  color: #777;
+  opacity: 1;
+}
+
+input[type=text]::placeholder, input[type=email]::placeholder {
+  color: #777;
+  opacity: 1;
 }
 
 .gallery {
@@ -635,6 +655,76 @@ main.item aside.suggestions {
   margin: 70px 0px 90px;
 }
 
+.paiement {
+  background-color: #FAF6ED;
+}
+
+.paiement div.resume, .paiement header, .paiement fieldset {
+  background-color: #fff;
+  border-color: #fff;
+  border-radius: 10px;
+  padding: 20px;
+  margin: 10px;
+}
+
+.paiement h2 {
+  margin: 0;
+}
+
+.paiement header {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.paiement header h1 {
+  margin: 0;
+}
+
+.paiement header img {
+  width: 200px;
+}
+
+.paiement header a {
+  color: #E50000;
+}
+
+.paiement .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.paiement .container .left fieldset {
+  -webkit-box-flex: 2;
+      -ms-flex-positive: 2;
+          flex-grow: 2;
+}
+
+.paiement .container .left fieldset.adresse {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.paiement .container .left fieldset.adresse input, .paiement .container .left fieldset.adresse select {
+  min-width: auto;
+  width: 100%;
+}
+
 html *, html *::before, html *::after {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -647,6 +737,11 @@ body {
 .page-right {
   width: calc(100% - 303px);
   margin-left: 303px;
+}
+
+.centered {
+  width: 1024px;
+  margin: auto;
 }
 
 /* Titres */

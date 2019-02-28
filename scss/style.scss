@@ -8,6 +8,7 @@
 @import "home";
 @import "galerie-html";
 @import "item-html";
+@import "paiement-html";
 
 
 html *, html *::before, html *::after{
@@ -21,6 +22,11 @@ body{
 .page-right{
     width: calc(100% - 303px);
     margin-left: 303px;
+}
+
+.centered{
+    width: 1024px;
+    margin: auto;
 }
 
 /* Titres */

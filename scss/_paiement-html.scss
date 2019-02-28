@@ -1,0 +1,47 @@
+.paiement{
+    background-color: $beige;
+    div.resume, header, fieldset{
+        background-color: $blanc;
+        border-color: $blanc;
+        border-radius: 10px;
+        padding: 20px;
+        margin: 10px;
+    }
+    h2{
+        margin: 0;
+    }
+    header{
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        h1{
+            margin: 0;
+        }
+        img{
+            width: 200px;
+        }
+        a{
+            color: $alert;
+        }
+    }
+    .container{
+        display: flex;
+        .left{
+            fieldset{
+                flex-grow: 2;
+                &.adresse{
+                    display: flex;
+                    flex-direction: column;
+                    flex-wrap: wrap;
+                    input, select{
+                        min-width: auto;
+                        width: 100%;
+                    }
+                }
+            }
+            
+        }
+    }
+
+}

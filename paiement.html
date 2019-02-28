@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Parallax</title>
+    <link href="https://fonts.googleapis.com/css?family=Raleway:400,500,700,800" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600" rel="stylesheet">
+    <link rel="stylesheet" href="/styles/style.css">
+    <link rel="stylesheet" href="/styles/normalize.css">
+
+</head>
+
+<body class="paiement">
+    <main class="centered">
+        <header>
+            <h1><a href="index.html"><img src="img/logo.png" alt="Logo Parallax"></a></h1>
+            <a href="#">Annuler</a>
+        </header>
+        <section class="container">
+            <div class="left">
+                <fieldset class="adresse">
+                    <h2>Adresse de livraison</h2>
+                    <div>
+                        <input type="text" placeholder="Nom *">
+                        <input type="text" placeholder="Prénom *">
+                    </div>
+                    <div>
+                        <input type="email" placeholder="Email *">
+                    </div>
+                    <div>
+                        <input type="text" placeholder="Adresse *">
+                        <input type="text" placeholder="Code postal *">
+                    </div>
+                    <div>
+                        <input type="text" placeholder="Ville *">
+                        <select name="pays" id="pays">
+                            <option value="">Pays *</option>
+                        </select>
+                    </div>
+                </fieldset>
+                <fieldset>
+                    <h2>Méthode de livraison</h2>
+                    <div>
+                        <input id="classique" name="livraison" type="radio">
+                        <label for="classique">Classique - 5,25€</label>
+                    </div>
+                    <div>
+                        <input id="express" name="livraison" type="radio">
+                        <label for="express">Express - 7€</label>
+                    </div>
+                    <div>
+                        <input id="magasin" name="livraison" type="radio">
+                        <label for="magasin">Enlèvement du colis en magasin - Gratuit</label>
+                    </div>
+                </fieldset>
+                <fieldset>
+                    <h2>Méthode de paiement</h2>
+                    <div>
+                        <input id="paypal" name="paiement" type="radio">
+                        <label for="paypal">Paypal</label>
+                    </div>
+                    <div>
+                        <input id="american" name="paiement" type="radio">
+                        <label for="american">American Express</label>
+                    </div>
+                    <div>
+                        <input id="bancontact" name="paiement" type="radio">
+                        <label for="bancontact">Bancontact</label>
+                    </div>
+                </fieldset>
+            </div>
+            <div class="resume">
+                <h2>Résumé de votre commande</h2>
+                <div>
+                    <img src="img/takeiteasy.png" alt="">
+                    <div>
+                        <h4>Take it Easy</h4>
+                        <p>Taille: M</p>
+                        <p>Quantité: 1</p>
+                    </div>
+                    <span>25€</span>
+                </div>
+                <div>
+                    <p>Livraison</p>
+                    <span>5€</span>
+                </div>
+                <div>
+                    <p>Total</p>
+                    <span>30€</span>
+                </div>
+                <a href="#" class="primary-btn">Valider la commande</a>
+            </div>
+        </section>
+    </main>
+</body>
+
+</html>
