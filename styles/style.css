@@ -1,6 +1,6 @@
 a.primary-btn {
   text-decoration: none;
-  color: white;
+  color: white !important;
   background-color: #C64800;
   padding: 10px 25px;
   font-size: 14px;
@@ -8,12 +8,13 @@ a.primary-btn {
   min-width: 120px;
   text-align: center;
   display: inline-block;
+  border: 1px solid #C64800;
 }
 
 a.secondary-btn {
   text-decoration: none;
   border: 1px solid #C64800;
-  color: #C64800;
+  color: #C64800 !important;
   background-color: #fff;
   padding: 10px 25px;
   font-size: 14px;
@@ -53,7 +54,7 @@ label {
   color: #7F7E7E;
 }
 
-input[type=text], input[type=email] {
+input[type=text], input[type=email], input[type=search] {
   background-color: rgba(240, 240, 240, 0.3);
   border: 1px solid rgba(119, 119, 119, 0.3);
   border-radius: 3px;
@@ -63,22 +64,22 @@ input[type=text], input[type=email] {
   min-width: 250px;
 }
 
-input[type=text]::-webkit-input-placeholder, input[type=email]::-webkit-input-placeholder {
+input[type=text]::-webkit-input-placeholder, input[type=email]::-webkit-input-placeholder, input[type=search]::-webkit-input-placeholder {
   color: #777;
   opacity: 1;
 }
 
-input[type=text]:-ms-input-placeholder, input[type=email]:-ms-input-placeholder {
+input[type=text]:-ms-input-placeholder, input[type=email]:-ms-input-placeholder, input[type=search]:-ms-input-placeholder {
   color: #777;
   opacity: 1;
 }
 
-input[type=text]::-ms-input-placeholder, input[type=email]::-ms-input-placeholder {
+input[type=text]::-ms-input-placeholder, input[type=email]::-ms-input-placeholder, input[type=search]::-ms-input-placeholder {
   color: #777;
   opacity: 1;
 }
 
-input[type=text]::placeholder, input[type=email]::placeholder {
+input[type=text]::placeholder, input[type=email]::placeholder, input[type=search]::placeholder {
   color: #777;
   opacity: 1;
 }
@@ -86,18 +87,18 @@ input[type=text]::placeholder, input[type=email]::placeholder {
 .gallery {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (1fr)[3];
-      grid-template-columns: repeat(3, 1fr);
+  -ms-grid-columns: (1fr)[2];
+      grid-template-columns: repeat(2, 1fr);
   -ms-grid-rows: auto;
       grid-template-rows: auto;
-  grid-gap: 2em;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  grid-gap: 1em;
+  -webkit-box-pack: left;
+      -ms-flex-pack: left;
+          justify-content: left;
 }
 
 .gallery .gallery-item {
-  width: 325px;
+  width: 300px;
 }
 
 .gallery .gallery-item a {
@@ -107,15 +108,50 @@ input[type=text]::placeholder, input[type=email]::placeholder {
 
 .gallery .gallery-item div.preview {
   background-color: #FAF6ED;
+  position: relative;
 }
 
 .gallery .gallery-item div.preview img {
-  -o-object-fit: cover;
-     object-fit: cover;
-  -o-object-position: center bottom;
-     object-position: center bottom;
+  -o-object-fit: contain;
+     object-fit: contain;
+  -o-object-position: center center;
+     object-position: center center;
   width: 100%;
-  height: 400px;
+  max-height: 400px;
+}
+
+.gallery .gallery-item div.preview div.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 50px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.gallery .gallery-item div.preview div.overlay i {
+  color: #fff;
+  text-align: center;
+  width: 100%;
+}
+
+.gallery .gallery-item div.preview div.overlay a {
+  width: 100%;
+  margin: 5px 0px;
 }
 
 .gallery .gallery-item div.infos {
@@ -140,6 +176,20 @@ input[type=text]::placeholder, input[type=email]::placeholder {
 
 .gallery .gallery-item div.author p span {
   color: #C64800;
+}
+
+@media only screen and (min-width: 1600px) {
+  .gallery {
+    -ms-grid-columns: (1fr)[4];
+        grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media only screen and (min-width: 980px) and (max-width: 1599px) {
+  .gallery {
+    -ms-grid-columns: (1fr)[3];
+        grid-template-columns: repeat(3, 1fr);
+  }
 }
 
 .breadcrumbs {
@@ -310,7 +360,7 @@ footer .copyright {
 }
 
 .home header.une-artiste div h2 span {
-  font-weight: 600;
+  font-weight: 400;
   font-size: 0.8em;
 }
 
@@ -331,6 +381,8 @@ footer .copyright {
 .home aside.lab-cta h3 {
   margin: 0;
   color: #fff;
+  font-weight: 400;
+  font-size: 1.3em;
 }
 
 .home main section {
@@ -340,15 +392,114 @@ footer .copyright {
 }
 
 .home main section.trending {
+  padding-top: 0;
+  margin-top: 40px;
+}
+
+.home main section.categories {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.home main section.categories span {
+  position: relative;
+  color: #fff;
+  font-size: 2.5em;
+  font-weight: 600;
+}
+
+.home main section.categories .left {
+  position: relative;
+  width: 50%;
+  height: 450px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.home main section.categories .left span {
+  font-size: 3.5em;
+}
+
+.home main section.categories .left::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("../img/tshirt-head.jpg");
+  background-size: cover;
+  background-position-y: center;
+  -webkit-filter: brightness(50%);
+          filter: brightness(50%);
+}
+
+.home main section.categories .right {
+  width: 50%;
+}
+
+.home main section.categories .right .sweater {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 225px;
   position: relative;
 }
 
-.home main section.trending h2 {
+.home main section.categories .right .sweater::before {
+  content: "";
   position: absolute;
-  -webkit-transform: rotate(270deg) translate(-100%, -260%);
-          transform: rotate(270deg) translate(-100%, -260%);
   top: 0;
   left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("../img/sweater-head.jpg");
+  background-size: cover;
+  background-position-y: center;
+  -webkit-filter: brightness(50%);
+          filter: brightness(50%);
+}
+
+.home main section.categories .right .hoodie {
+  height: 225px;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.home main section.categories .right .hoodie::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("../img/hoodie-head.jpg");
+  background-size: cover;
+  background-position-y: center;
+  -webkit-filter: brightness(50%);
+          filter: brightness(50%);
 }
 
 .home main section.lab-home {
@@ -376,7 +527,11 @@ footer .copyright {
 
 .home main section.quote {
   font-weight: 500;
+  background-image: url("../img/texture.png");
+  background-position: center bottom;
   text-align: right;
+  margin-bottom: 0px;
+  padding-bottom: 120px;
 }
 
 .home main section.quote q {
@@ -412,6 +567,7 @@ footer .copyright {
   background-size: 130%;
   background-position: 0 center;
   height: 400px;
+  margin-top: 0;
 }
 
 .home main section.shop-adress > div {
@@ -502,6 +658,7 @@ main.galerie section.filtres div.mid-filtres div {
 
 main.galerie section.filtres div.bot-filtres {
   margin: 5px 5px;
+  padding-right: 20px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -558,6 +715,7 @@ main.galerie section.filtres div.bot-filtres select {
 main.galerie section.gallery {
   margin-top: 0;
   padding-top: 30px;
+  padding-right: 30px;
 }
 
 main.item .flex {
@@ -700,29 +858,25 @@ main.item aside.suggestions {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 0px;
+          flex: 1 1 0;
 }
 
-.paiement .container .left fieldset {
-  -webkit-box-flex: 2;
-      -ms-flex-positive: 2;
-          flex-grow: 2;
-}
-
-.paiement .container .left fieldset.adresse {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+.paiement .container .left {
+  width: 60%;
 }
 
 .paiement .container .left fieldset.adresse input, .paiement .container .left fieldset.adresse select {
-  min-width: auto;
-  width: 100%;
+  min-width: 0;
+}
+
+.paiement .container .resume {
+  width: 40%;
+}
+
+.paiement .container .resume img {
+  width: 150px;
 }
 
 html *, html *::before, html *::after {

@@ -1,6 +1,6 @@
 a.primary-btn{
     text-decoration: none;
-    color: white;
+    color: white !important;
     background-color: $orange;
     padding: 10px 25px;
     font-size: 14px;
@@ -8,12 +8,13 @@ a.primary-btn{
     min-width: 120px;
     text-align: center;
     display: inline-block;
+    border: 1px solid $orange;
 }
 
 a.secondary-btn{
     text-decoration: none;
     border: 1px solid $orange;
-    color: $orange;
+    color: $orange !important;
     background-color: $blanc;
     padding: 10px 25px;
     font-size: 14px;

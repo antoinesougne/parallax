@@ -1,42 +1,77 @@
 .gallery{
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     grid-template-rows: auto;
-    grid-gap: 2em;
-    justify-content: space-between;
+    grid-gap: 1em;
+    justify-content: left;
     .gallery-item{
-        width: 325px;
+        width: 300px;
         a{
             color: $text-color;
             text-decoration: none; 
         }
         div.preview{
             background-color: $beige;
-            
+            position: relative;
            img{
-             object-fit: cover;
-             object-position: center bottom; 
+             object-fit: contain;
+             object-position: center center; 
              width: 100%;
-             height: 400px;
-            } 
-        }
-        div.infos{
-            display: flex;
-            justify-content: space-between;
-            color: $text-color;
-            font-weight: 500;
-            font-size: 1.2em;
-            p{
-                margin-bottom: 0.5rem;
+             max-height: 400px;
+            }
+            div.overlay{
+                position: absolute;
+                top: 0;
+                left: 0;
+                display: flex;
+                flex-direction: column;
+                padding: 50px;
+                align-items: center;
+                justify-content: center;
+                width: 100%;
+                height: 100%;
+                background-color: rgba(0, 0, 0, 0.8);
+                i{
+                    color: $blanc;
+                    text-align: center;
+                    width: 100%;
+                }
+                a{
+                    width: 100%;
+                    margin: 5px 0px;
+
+                }
             }
         }
-        div.author{
-            p{
-                margin: 0;
-                span{
-                    color: $orange;
+            div.infos{
+                display: flex;
+                justify-content: space-between;
+                color: $text-color;
+                font-weight: 500;
+                font-size: 1.2em;
+                p{
+                    margin-bottom: 0.5rem;
+                }
+            }
+            div.author{
+                p{
+                    margin: 0;
+                    span{
+                        color: $orange;
+                    }
                 }
             }
         }
     }
+
+@media only screen and (min-width: 1600px) {
+    .gallery{
+        grid-template-columns: repeat(4, 1fr);
+    }  
 }
+
+@media only screen and (min-width: 980px) and (max-width: 1599px) {
+    .gallery{
+        grid-template-columns: repeat(3, 1fr);
+    }  
+ }

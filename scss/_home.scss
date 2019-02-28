@@ -13,7 +13,7 @@
                 color: white;
                 margin: 0;
                 span{
-                    font-weight: 600;
+                    font-weight: 400;
                     font-size: 0.8em;
                 }
             }
@@ -28,6 +28,8 @@
         h3{
             margin: 0;
             color: $blanc;
+            font-weight: 400;
+            font-size: 1.3em;
         }
     }
     main{
@@ -37,12 +39,75 @@
             padding: 60px 0px;
         }
         section.trending{
-            position: relative;
-            h2{
-                position: absolute;
-                transform: rotate(270deg) translate(-100%, -260%);
-                top:0;
-                left: 0;
+            padding-top: 0;
+            margin-top: 40px;
+        }
+        section.categories{
+            display: flex;
+            span{
+                position: relative;
+                color: #fff;
+                font-size: 2.5em;
+                font-weight: 600;
+            }
+            .left{
+                position: relative;
+                width: 50%;
+                height: 450px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                span{
+                    font-size: 3.5em;
+                }
+                &::before {
+                    content: "";
+                    position: absolute;
+                    top: 0; left: 0;
+                    width: 100%; height: 100%;
+                    background-image: url('../img/tshirt-head.jpg');
+                    background-size: cover;
+                    background-position-y: center;
+                    filter: brightness(50%);
+                  }
+                  
+            }
+            .right{
+                width: 50%;
+                .sweater{
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    height: 225px;
+                    position: relative;
+                    &::before {
+                        content: "";
+                        position: absolute;
+                        top: 0; left: 0;
+                        width: 100%; height: 100%;
+                        background-image: url('../img/sweater-head.jpg');
+                        background-size: cover;
+                        background-position-y: center;
+                        filter: brightness(50%);
+                      }
+                }
+                .hoodie{
+                    height: 225px;
+                    position: relative;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    &::before {
+                        content: "";
+                        position: absolute;
+                        top: 0; left: 0;
+                        width: 100%; height: 100%;
+                        background-image: url('../img/hoodie-head.jpg');
+                        background-size: cover;
+                        background-position-y: center;
+                        filter: brightness(50%);
+                      }
+                }
             }
         }
         section.lab-home{
@@ -63,7 +128,11 @@
         }
         section.quote{
             font-weight: 500;
+            background-image: url('../img/texture.png');
+            background-position: center bottom;
             text-align: right;
+            margin-bottom: 0px;
+            padding-bottom: 120px;
             q{
                 font-size: 1.8em;
                 display: block;
@@ -95,6 +164,7 @@
            background-size: 130%;
            background-position: 0 center;
            height: 400px;
+           margin-top: 0;
            &>div{ 
                text-align: center;
                color: white;

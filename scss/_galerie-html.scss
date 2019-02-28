@@ -16,6 +16,7 @@ main.galerie{
         }
         div.bot-filtres{
             margin: 5px 5px;
+            padding-right: 20px;
             display: flex;
             justify-content: space-between;
             div{
@@ -54,5 +55,6 @@ main.galerie{
     section.gallery{
         margin-top: 0;
         padding-top: 30px;
+        padding-right: 30px;
     }
 }
