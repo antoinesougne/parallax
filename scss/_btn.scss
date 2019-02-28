@@ -1,0 +1,24 @@
+a.primary-btn{
+    text-decoration: none;
+    color: white;
+    background-color: $orange;
+    padding: 10px 25px;
+    font-size: 14px;
+    font-weight: 500;
+    min-width: 120px;
+    text-align: center;
+    display: inline-block;
+}
+
+a.secondary-btn{
+    text-decoration: none;
+    border: 1px solid $orange;
+    color: $orange;
+    background-color: $blanc;
+    padding: 10px 25px;
+    font-size: 14px;
+    font-weight: 500;
+    min-width: 120px;
+    text-align: center;
+    display: inline-block;
+}

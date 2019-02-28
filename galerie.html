@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Parallax</title>
+    <link href="https://fonts.googleapis.com/css?family=Raleway:400,500,700,800" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600" rel="stylesheet">
+    <link rel="stylesheet" href="/styles/style.css">
+    <link rel="stylesheet" href="/styles/normalize.css">
+
+</head>
+
+<body class="home">
+    <nav class="main-menu">
+        <a href="#"><img src="/img/logo.png" alt="Logo Parallax"></a>
+        <ul class="menu">
+            <li>
+                <input id="check01" type="checkbox" name="menu" checked />
+                <label for="check01">Shop</label>
+                <ul class="submenu">
+                    <li><a href=""> T-shirt Homme</a></li>
+                    <li><a href=""> T-shirt Femme</a></li>
+                    <li><a href=""> Hoodie</a></li>
+                    <li><a href=""> Sweater</a></li>
+                </ul>
+            </li>
+            <li><input id="check02" type="checkbox" name="menu" />
+                <label for="check02" class="orange">Le Lab</label>
+                <ul class="submenu">
+                    <li><a href=""> Atelier</a></li>
+                    <li><a href=""> Profil</a></li>
+                    <li><a href=""> Règlement</a></li>
+                </ul>
+            </li>
+            <li><input id="check03" type="checkbox" name="menu" />
+                <label for="check03">Collectif Parallax</label>
+                <ul class="submenu">
+                    <li><a href=""> Shop physique</a></li>
+                    <li><a href=""> Expositions</a></li>
+                </ul>
+            </li>
+            <li><a href=""> News</a></li>
+            <li><a href=""> Contact</a></li>
+            <li><a href=""> Aide</a></li>
+        </ul>
+        <ul>
+            <li><a href=""> Facebook</a></li>
+            <li><a href=""> Instagram</a></li>
+        </ul>
+    </nav>
+    <main class="galerie page-right">
+        <section class="filtres">
+            <div class="top-filtres">
+                <select name="type" id="type">
+                    <option value="">Type de produit</option>
+                    <option value="tshirt">T-shirt</option>
+                    <option value="hoodie">Hoodie</option>
+                    <option value="sweater">Sweater</option>
+                </select>
+                <select name="type" id="type">
+                    <option value="">Genre</option>
+                    <option value="tshirt">Homme</option>
+                    <option value="hoodie">Femme</option>
+                </select>
+                <select name="type" id="type">
+                    <option value="">Taille</option>
+                    <option value="tshirt">S</option>
+                    <option value="hoodie">M</option>
+                    <option value="sweater">L</option>
+                </select>
+                <select name="type" id="type">
+                    <option value="">Couleur</option>
+                    <option value="tshirt">Blanc</option>
+                    <option value="hoodie">Noir</option>
+                    <option value="sweater">Vert</option>
+                    <option value="sweater">Rouge</option>
+                    <option value="sweater">Bleu</option>
+                </select>
+                <select name="type" id="type">
+                    <option value="">Gamme de prix</option>
+                    <option value="tshirt">- de 20€</option>
+                    <option value="">+ de 20€</option>
+                </select>
+            </div>
+            <div class="mid-filtres">
+                <div>
+                    <label for="artiste">Artiste :</label>
+                    <input type="search" placeholder="Rechercher">
+                </div>
+                <div>
+                    <select name="type" id="type">
+                        <option value="">Artiste vérifié</option>
+                        <option value="tshirt">Oui</option>
+                        <option value="">Non</option>
+                    </select>
+                </div>
+            </div>
+            <div class="bot-filtres">
+                <div>
+                    <p>Filtres :</p>
+                    <div class="filtre"><span>T-shirt</span><a href="">X</a></div>
+                    <div class="filtre"><span>Homme</span><a href="">X</a></div>
+                </div>
+                <div>
+                    <p>Tri :</p>
+                    <select name="type" id="type">
+                        <option value="">Popularité</option>
+                        <option value="tshirt">- de 20€</option>
+                        <option value="">+ de 20€</option>
+                    </select>
+                    <select name="type" id="type">
+                        <option value="">Aujourd'hui</option>
+                        <option value="tshirt">- de 20€</option>
+                        <option value="">+ de 20€</option>
+                    </select>
+                </div>
+            </div>
+        </section>
+        <section class="gallery">
+            <article class="gallery-item">
+                <a href="item.html">
+                    <div class="preview">
+                        <img src="img/takeiteasy.png" alt="">
+                    </div>
+                    <div class="infos">
+                        <p>Take it easy</p>
+                        <p>25€</p>
+                    </div>
+                    <div class="author">
+                        <p>by <span>Eugenesky</span></p>
+                    </div>
+                </a>
+            </article>
+            <article class="gallery-item">
+                <a href="#">
+                    <div class="preview">
+                        <img src="img/takeiteasy.png" alt="">
+                    </div>
+                    <div class="infos">
+                        <p>Take it easy</p>
+                        <p>25€</p>
+                    </div>
+                    <div class="author">
+                        <p>by <span>Eugenesky</span></p>
+                    </div>
+                </a>
+            </article>
+            <article class="gallery-item">
+                <a href="#">
+                    <div class="preview">
+                        <img src="img/takeiteasy.png" alt="">
+                    </div>
+                    <div class="infos">
+                        <p>Take it easy</p>
+                        <p>25€</p>
+                    </div>
+                    <div class="author">
+                        <p>by <span>Eugenesky</span></p>
+                    </div>
+                </a>
+            </article>
+            <article class="gallery-item">
+                <a href="#">
+                    <div class="preview">
+                        <img src="img/takeiteasy.png" alt="">
+                    </div>
+                    <div class="infos">
+                        <p>Take it easy</p>
+                        <p>25€</p>
+                    </div>
+                    <div class="author">
+                        <p>by <span>Eugenesky</span></p>
+                    </div>
+                </a>
+            </article>
+            <article class="gallery-item">
+                <a href="#">
+                    <div class="preview">
+                        <img src="img/takeiteasy.png" alt="">
+                    </div>
+                    <div class="infos">
+                        <p>Take it easy</p>
+                        <p>25€</p>
+                    </div>
+                    <div class="author">
+                        <p>by <span>Eugenesky</span></p>
+                    </div>
+                </a>
+            </article>
+            <article class="gallery-item">
+                <a href="#">
+                    <div class="preview">
+                        <img src="img/takeiteasy.png" alt="">
+                    </div>
+                    <div class="infos">
+                        <p>Take it easy</p>
+                        <p>25€</p>
+                    </div>
+                    <div class="author">
+                        <p>by <span>Eugenesky</span></p>
+                    </div>
+                </a>
+            </article>
+            <article class="gallery-item">
+                <a href="#">
+                    <div class="preview">
+                        <img src="img/takeiteasy.png" alt="">
+                    </div>
+                    <div class="infos">
+                        <p>Take it easy</p>
+                        <p>25€</p>
+                    </div>
+                    <div class="author">
+                        <p>by <span>Eugenesky</span></p>
+                    </div>
+                </a>
+            </article>
+            <article class="gallery-item">
+                <a href="#">
+                    <div class="preview">
+                        <img src="img/takeiteasy.png" alt="">
+                    </div>
+                    <div class="infos">
+                        <p>Take it easy</p>
+                        <p>25€</p>
+                    </div>
+                    <div class="author">
+                        <p>by <span>Eugenesky</span></p>
+                    </div>
+                </a>
+            </article>
+            <article class="gallery-item">
+                <a href="#">
+                    <div class="preview">
+                        <img src="img/takeiteasy.png" alt="">
+                    </div>
+                    <div class="infos">
+                        <p>Take it easy</p>
+                        <p>25€</p>
+                    </div>
+                    <div class="author">
+                        <p>by <span>Eugenesky</span></p>
+                    </div>
+                </a>
+            </article>
+            <article class="gallery-item">
+                <a href="#">
+                    <div class="preview">
+                        <img src="img/takeiteasy.png" alt="">
+                    </div>
+                    <div class="infos">
+                        <p>Take it easy</p>
+                        <p>25€</p>
+                    </div>
+                    <div class="author">
+                        <p>by <span>Eugenesky</span></p>
+                    </div>
+                </a>
+            </article>
+            <article class="gallery-item">
+                <a href="#">
+                    <div class="preview">
+                        <img src="img/takeiteasy.png" alt="">
+                    </div>
+                    <div class="infos">
+                        <p>Take it easy</p>
+                        <p>25€</p>
+                    </div>
+                    <div class="author">
+                        <p>by <span>Eugenesky</span></p>
+                    </div>
+                </a>
+            </article>
+            <article class="gallery-item">
+                <a href="#">
+                    <div class="preview">
+                        <img src="img/takeiteasy.png" alt="">
+                    </div>
+                    <div class="infos">
+                        <p>Take it easy</p>
+                        <p>25€</p>
+                    </div>
+                    <div class="author">
+                        <p>by <span>Eugenesky</span></p>
+                    </div>
+                </a>
+            </article>
+            <article class="gallery-item">
+                <a href="#">
+                    <div class="preview">
+                        <img src="img/takeiteasy.png" alt="">
+                    </div>
+                    <div class="infos">
+                        <p>Take it easy</p>
+                        <p>25€</p>
+                    </div>
+                    <div class="author">
+                        <p>by <span>Eugenesky</span></p>
+                    </div>
+                </a>
+            </article>
+            <article class="gallery-item">
+                <a href="#">
+                    <div class="preview">
+                        <img src="img/takeiteasy.png" alt="">
+                    </div>
+                    <div class="infos">
+                        <p>Take it easy</p>
+                        <p>25€</p>
+                    </div>
+                    <div class="author">
+                        <p>by <span>Eugenesky</span></p>
+                    </div>
+                </a>
+            </article>
+            <article class="gallery-item">
+                <a href="#">
+                    <div class="preview">
+                        <img src="img/takeiteasy.png" alt="">
+                    </div>
+                    <div class="infos">
+                        <p>Take it easy</p>
+                        <p>25€</p>
+                    </div>
+                    <div class="author">
+                        <p>by <span>Eugenesky</span></p>
+                    </div>
+                </a>
+            </article>
+            <article class="gallery-item">
+                <a href="#">
+                    <div class="preview">
+                        <img src="img/takeiteasy.png" alt="">
+                    </div>
+                    <div class="infos">
+                        <p>Take it easy</p>
+                        <p>25€</p>
+                    </div>
+                    <div class="author">
+                        <p>by <span>Eugenesky</span></p>
+                    </div>
+                </a>
+            </article>
+            <article class="gallery-item">
+                <a href="#">
+                    <div class="preview">
+                        <img src="img/takeiteasy.png" alt="">
+                    </div>
+                    <div class="infos">
+                        <p>Take it easy</p>
+                        <p>25€</p>
+                    </div>
+                    <div class="author">
+                        <p>by <span>Eugenesky</span></p>
+                    </div>
+                </a>
+            </article>
+            <article class="gallery-item">
+                <a href="#">
+                    <div class="preview">
+                        <img src="img/takeiteasy.png" alt="">
+                    </div>
+                    <div class="infos">
+                        <p>Take it easy</p>
+                        <p>25€</p>
+                    </div>
+                    <div class="author">
+                        <p>by <span>Eugenesky</span></p>
+                    </div>
+                </a>
+            </article>
+            <article class="gallery-item">
+                <a href="#">
+                    <div class="preview">
+                        <img src="img/takeiteasy.png" alt="">
+                    </div>
+                    <div class="infos">
+                        <p>Take it easy</p>
+                        <p>25€</p>
+                    </div>
+                    <div class="author">
+                        <p>by <span>Eugenesky</span></p>
+                    </div>
+                </a>
+            </article>
+            <article class="gallery-item">
+                <a href="#">
+                    <div class="preview">
+                        <img src="img/takeiteasy.png" alt="">
+                    </div>
+                    <div class="infos">
+                        <p>Take it easy</p>
+                        <p>25€</p>
+                    </div>
+                    <div class="author">
+                        <p>by <span>Eugenesky</span></p>
+                    </div>
+                </a>
+            </article>
+            <article class="gallery-item">
+                <a href="#">
+                    <div class="preview">
+                        <img src="img/takeiteasy.png" alt="">
+                    </div>
+                    <div class="infos">
+                        <p>Take it easy</p>
+                        <p>25€</p>
+                    </div>
+                    <div class="author">
+                        <p>by <span>Eugenesky</span></p>
+                    </div>
+                </a>
+            </article>
+            <article class="gallery-item">
+                <a href="#">
+                    <div class="preview">
+                        <img src="img/takeiteasy.png" alt="">
+                    </div>
+                    <div class="infos">
+                        <p>Take it easy</p>
+                        <p>25€</p>
+                    </div>
+                    <div class="author">
+                        <p>by <span>Eugenesky</span></p>
+                    </div>
+                </a>
+            </article>
+        </section>
+    </main>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,69 @@
+@import "variables";
+@import "btn";
+@import "forms";
+@import "galerie";
+@import "breadcrumbs";
+@import "main-menu";
+@import "footer";
+@import "home";
+@import "galerie-html";
+@import "item-html";
+
+
+html *, html *::before, html *::after{
+    box-sizing: border-box;
+}
+
+body{
+    font-family: $raleway;
+}
+
+.page-right{
+    width: calc(100% - 303px);
+    margin-left: 303px;
+}
+
+/* Titres */
+h1{
+    font-weight: 800;
+}
+
+h2{
+    font-weight: 500;
+    font-size: 2em;
+}
+
+h3{
+    font-weight: 500;
+    font-size: 1.8em;
+}
+h4{
+    font-weight: 400;
+    font-size: 1.2em;
+}
+
+/* Paragraphes */
+p{
+    font-family: $opensans;
+    font-weight: 400;
+}
+
+.tete-texte{
+    font-weight: 500;
+    font-size: 1.2em;
+}
+
+/* Autres */
+
+.flex{
+    display: flex;
+}
+.space-between{
+    justify-content: space-between;
+}
+.align-left{
+    text-align: left;
+}
+.orange{
+    color: $orange !important;
+}

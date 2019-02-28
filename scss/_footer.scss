@@ -1,0 +1,32 @@
+footer{
+    background-color: $text-color;
+    color: $blanc;
+    &>div{
+        display: flex;
+        justify-content: space-between;
+        padding-right: 30px;
+        h4{
+            text-transform: uppercase;
+        }
+        ul{
+            list-style-type: none;
+            padding: 0;
+            li{
+                padding: 2px 0px;
+                a{
+                    color: $blanc;
+                    text-decoration: none;
+                    font-family: $opensans;
+                    font-weight: 300;
+                }
+            }
+        }
+    }
+    .copyright{
+        display: flex;
+        justify-content: center;
+        padding-top: 50px;
+        font-weight: 300;
+        font-family: $opensans;
+    }
+}

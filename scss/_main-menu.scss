@@ -1,0 +1,51 @@
+nav.main-menu{
+    height: 100vh;
+    left: 0;
+    position: fixed;
+    width: 303px;
+    padding: 30px 0px 0px 20px;
+    img{
+        width: 200px;
+    }
+    a{
+        text-decoration: none;
+        color: $text-color;
+    }
+    &>ul{
+        padding-top: 30px;
+        padding-left: 0;
+        margin: 0;
+        list-style-type: none;
+        label{
+            cursor: pointer;
+            position: relative;
+            color: $text-color;
+            &::after{}
+        }
+        input{
+            display:none
+        }
+        input:checked ~ ul.submenu{
+            max-height:300px;
+            transition:max-height 0.5s ease-in;
+        }
+        li{
+            font-weight: 600;
+            padding: 4px 0px;
+            ul.submenu{
+                max-height:0;
+                overflow:hidden;
+                transition:max-height 0.5s ease-out;
+                min-width:100%;
+                list-style: none;
+                padding-left: 20px;
+                padding-top: 5px;
+                li{
+                    font-weight: 500;
+                    padding: 4px 0px;
+                    font-size: 0.8em;
+                }
+              }
+        }
+    }
+}

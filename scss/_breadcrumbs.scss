@@ -1,0 +1,29 @@
+.breadcrumbs{
+    display: flex;
+    list-style: none;
+    padding-left: 0;
+    li{
+        padding-right: 7px;
+        &::after{
+            content: ">";
+            display: inline;
+            color: #898989;
+            font-size: 0.7em;
+            padding-left: 7px;
+        }
+        &:last-child{
+            a{
+                color: $orange;
+            }
+            &::after{
+                content: "";
+            }
+        }
+        a{
+            text-decoration: none;
+            color: #898989;
+            
+        }
+        
+    }
+}

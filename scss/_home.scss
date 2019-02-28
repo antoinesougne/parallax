@@ -1,0 +1,146 @@
+.home{
+    header.une-artiste{
+        height: 200px;
+        background-image: url('../img/artiste-une.jpg');
+        background-size: cover;
+        background-position: 0px -100px;
+        div{
+            background-color: rgba(0, 0, 0, 0.5);
+            padding: 15px;
+            display: flex;
+            justify-content: space-between;
+            h2{
+                color: white;
+                margin: 0;
+                span{
+                    font-weight: 600;
+                    font-size: 0.8em;
+                }
+            }
+        }
+    }
+    aside.lab-cta{
+        padding: 15px;
+        background-color: $orange;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        h3{
+            margin: 0;
+            color: $blanc;
+        }
+    }
+    main{
+        section{
+            margin-top: 80px;
+            margin-bottom: 80px;
+            padding: 60px 0px;
+        }
+        section.trending{
+            position: relative;
+            h2{
+                position: absolute;
+                transform: rotate(270deg) translate(-100%, -260%);
+                top:0;
+                left: 0;
+            }
+        }
+        section.lab-home{
+            background: linear-gradient(90deg, $beige 50%, $blanc 50%);
+            flex-direction: row;
+            div>div{
+                padding: 30px;
+                text-align: center;
+                a{
+                    margin: 20px 0px;
+                    display: inline-block;
+                }
+            }
+            img{
+                max-width: 550px;
+
+            }
+        }
+        section.quote{
+            font-weight: 500;
+            text-align: right;
+            q{
+                font-size: 1.8em;
+                display: block;
+                padding-right: 30px;
+                
+            }
+            cite{
+                display: inline-block;
+                padding: 20px 30px 0px 0px;
+                font-style: normal;
+                font-size: 1.5em;
+                color: $orange;
+                position: relative;
+                &::before{
+                    content: " ";
+                    position: absolute;
+                    display: block;
+                    transform: translate(-120%, 200%);
+                    top: 50%;
+                    left: 0;
+                    width: 50px;
+                    height: 4px;
+                    background-color: $orange;
+                }
+            }
+        }
+        section.shop-adress{
+           background-image: url("../img/shop.jpg");
+           background-size: 130%;
+           background-position: 0 center;
+           height: 400px;
+           &>div{ 
+               text-align: center;
+               color: white;
+               display: flex;
+                justify-content: flex-end;
+               &>div{
+                padding-right: 15%;
+                    address{
+                        font-style: normal;
+                        font-family: $opensans;
+                        font-size: 1.2em;
+                        font-weight: 400;
+                        p{
+                            margin: 7px 0px;
+                        }
+                    }
+               }
+               a{
+                   margin-top: 30px;
+               }
+           }
+        }
+        section.news{
+            display: flex;
+            article{
+                margin: 0px 10px;
+                width: 320px;
+                height: 450px;
+                display: flex;
+                align-items: flex-end;
+                h2{
+                    color: $blanc;
+                    font-size: 2.5em;
+                    padding: 10px;
+                    margin: 0;
+                }
+                &:first-child{
+                    background-image: url('../img/news1.png');
+                }
+                &:nth-child(2){
+                    background-image: url('../img/news2.png');
+                }
+                &:nth-child(3){
+                    background-image: url('../img/news3.png');
+                }
+            }
+        }
+    }
+}
