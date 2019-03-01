@@ -1,14 +1,60 @@
 a.primary-btn {
   text-decoration: none;
-  color: white !important;
+  color: #fff !important;
   background-color: #C64800;
   padding: 10px 25px;
   font-size: 14px;
   font-weight: 500;
-  min-width: 120px;
+  min-width: 130px;
   text-align: center;
   display: inline-block;
   border: 1px solid #C64800;
+  -webkit-transition: background-color 0.3s ease-in-out;
+  transition: background-color 0.3s ease-in-out;
+  position: relative;
+}
+
+a.primary-btn span {
+  display: inline-block;
+  position: relative;
+  -webkit-transition: all 300ms ease-out;
+  transition: all 300ms ease-out;
+  will-change: transform;
+}
+
+a.primary-btn:hover span {
+  -webkit-transform: translate3d(-1rem, 0, 0);
+          transform: translate3d(-1rem, 0, 0);
+}
+
+a.primary-btn svg {
+  position: absolute;
+  width: 1.1em;
+  right: 0px;
+  right: 0rem;
+  opacity: 0;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  -webkit-transition: all 300ms ease-out;
+  transition: all 300ms ease-out;
+  will-change: right, opacity;
+  stroke: #fff;
+}
+
+a.primary-btn svg * {
+  stroke-width: 5;
+  stroke-color: transparent;
+}
+
+a.primary-btn:hover svg {
+  opacity: 1;
+  right: 1rem;
+}
+
+a.primary-btn:hover {
+  background-color: #c74900;
+  border: 1px solid #c74900;
 }
 
 a.secondary-btn {
@@ -19,9 +65,51 @@ a.secondary-btn {
   padding: 10px 25px;
   font-size: 14px;
   font-weight: 500;
-  min-width: 120px;
+  min-width: 130px;
   text-align: center;
   display: inline-block;
+  border: 1px solid #fff;
+  -webkit-transition: background-color 0.3s ease-in-out;
+  transition: background-color 0.3s ease-in-out;
+  position: relative;
+}
+
+a.secondary-btn span {
+  display: inline-block;
+  position: relative;
+  -webkit-transition: all 300ms ease-out;
+  transition: all 300ms ease-out;
+  will-change: transform;
+}
+
+a.secondary-btn:hover span {
+  -webkit-transform: translate3d(-1rem, 0, 0);
+          transform: translate3d(-1rem, 0, 0);
+}
+
+a.secondary-btn svg {
+  position: absolute;
+  width: 1.1em;
+  right: 0px;
+  right: 0rem;
+  opacity: 0;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  -webkit-transition: all 300ms ease-out;
+  transition: all 300ms ease-out;
+  will-change: right, opacity;
+  stroke: #C64800;
+}
+
+a.secondary-btn svg * {
+  stroke-width: 5;
+  stroke-color: transparent;
+}
+
+a.secondary-btn:hover svg {
+  opacity: 1;
+  right: 1rem;
 }
 
 select {
@@ -91,14 +179,11 @@ input[type=text]::placeholder, input[type=email]::placeholder, input[type=search
       grid-template-columns: repeat(2, 1fr);
   -ms-grid-rows: auto;
       grid-template-rows: auto;
-  grid-gap: 1em;
+  grid-gap: 2em;
   -webkit-box-pack: left;
       -ms-flex-pack: left;
           justify-content: left;
-}
-
-.gallery .gallery-item {
-  width: 300px;
+  padding-right: 30px;
 }
 
 .gallery .gallery-item a {
@@ -111,17 +196,22 @@ input[type=text]::placeholder, input[type=email]::placeholder, input[type=search
   position: relative;
 }
 
+.gallery .gallery-item div.preview:hover .overlay {
+  opacity: 1;
+}
+
 .gallery .gallery-item div.preview img {
   -o-object-fit: contain;
      object-fit: contain;
-  -o-object-position: center center;
-     object-position: center center;
+  -o-object-position: center bottom;
+     object-position: center bottom;
   width: 100%;
-  max-height: 400px;
 }
 
 .gallery .gallery-item div.preview div.overlay {
   position: absolute;
+  cursor: pointer;
+  opacity: 0;
   top: 0;
   left: 0;
   display: -webkit-box;
@@ -131,7 +221,7 @@ input[type=text]::placeholder, input[type=email]::placeholder, input[type=search
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  padding: 50px;
+  padding: 0px 60px;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -141,6 +231,12 @@ input[type=text]::placeholder, input[type=email]::placeholder, input[type=search
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.8);
+}
+
+.gallery .gallery-item div.preview div.overlay i {
+  color: white;
+  font-size: 6.5em;
+  padding: 40px 0px;
 }
 
 .gallery .gallery-item div.preview div.overlay a {
@@ -249,6 +345,7 @@ nav.main-menu > ul label {
   cursor: pointer;
   position: relative;
   color: #333;
+  font-size: 1rem;
 }
 
 nav.main-menu > ul input {
@@ -360,7 +457,9 @@ footer .copyright {
 
 .home aside.lab-cta {
   padding: 15px;
-  background-color: #C64800;
+  background-image: url("../img/bgi-lab.png");
+  background-position: center;
+  background-size: cover;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -390,10 +489,19 @@ footer .copyright {
   margin-top: 40px;
 }
 
+.home main section.trending .gallery {
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
+}
+
 .home main section.categories {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+}
+
+.home main section.categories a {
+  text-decoration: none;
 }
 
 .home main section.categories span {
@@ -434,6 +542,15 @@ footer .copyright {
   background-position-y: center;
   -webkit-filter: brightness(50%);
           filter: brightness(50%);
+  -webkit-transition: -webkit-filter 0.5s ease;
+  transition: -webkit-filter 0.5s ease;
+  transition: filter 0.5s ease;
+  transition: filter 0.5s ease, -webkit-filter 0.5s ease;
+}
+
+.home main section.categories .left:hover::before {
+  -webkit-filter: brightness(100%);
+          filter: brightness(100%);
 }
 
 .home main section.categories .right {
@@ -466,6 +583,15 @@ footer .copyright {
   background-position-y: center;
   -webkit-filter: brightness(50%);
           filter: brightness(50%);
+  -webkit-transition: -webkit-filter 0.5s ease;
+  transition: -webkit-filter 0.5s ease;
+  transition: filter 0.5s ease;
+  transition: filter 0.5s ease, -webkit-filter 0.5s ease;
+}
+
+.home main section.categories .right .sweater:hover::before {
+  -webkit-filter: brightness(100%);
+          filter: brightness(100%);
 }
 
 .home main section.categories .right .hoodie {
@@ -494,20 +620,36 @@ footer .copyright {
   background-position-y: center;
   -webkit-filter: brightness(50%);
           filter: brightness(50%);
+  -webkit-transition: -webkit-filter 0.5s ease;
+  transition: -webkit-filter 0.5s ease;
+  transition: filter 0.5s ease;
+  transition: filter 0.5s ease, -webkit-filter 0.5s ease;
+}
+
+.home main section.categories .right .hoodie:hover::before {
+  -webkit-filter: brightness(100%);
+          filter: brightness(100%);
 }
 
 .home main section.lab-home {
   background: -webkit-gradient(linear, left top, right top, color-stop(50%, #FAF6ED), color-stop(50%, #fff));
   background: linear-gradient(90deg, #FAF6ED 50%, #fff 50%);
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+}
+
+.home main section.lab-home .flex {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.home main section.lab-home picture {
+  width: 50%;
 }
 
 .home main section.lab-home div > div {
   padding: 30px;
   text-align: center;
+  width: 50%;
 }
 
 .home main section.lab-home div > div a {
@@ -516,16 +658,18 @@ footer .copyright {
 }
 
 .home main section.lab-home img {
-  max-width: 550px;
+  width: 100%;
 }
 
 .home main section.quote {
   font-weight: 500;
   background-image: url("../img/texture.png");
   background-position: center bottom;
+  background-repeat: no-repeat;
   text-align: right;
   margin-bottom: 0px;
   padding-bottom: 120px;
+  position: relative;
 }
 
 .home main section.quote q {
@@ -677,7 +821,7 @@ main.galerie section.filtres div.bot-filtres div.filtre {
   background-color: #f1f1f1;
   border-radius: 21px;
   font-size: 12px;
-  color: #7F7E7E;
+  color: #7f7e7e;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -699,7 +843,7 @@ main.galerie section.filtres div.bot-filtres div.filtre a {
 
 main.galerie section.filtres div.bot-filtres p {
   font-size: 14px;
-  color: #7F7E7E;
+  color: #7f7e7e;
 }
 
 main.galerie section.filtres div.bot-filtres select {
@@ -921,6 +1065,11 @@ p {
 .tete-texte {
   font-weight: 500;
   font-size: 1.2em;
+}
+
+/* Icon fonts */
+i[class^="icon-"]:before, i[class*=" icon-"]:before {
+  margin: 0;
 }
 
 /* Autres */

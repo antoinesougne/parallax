@@ -1,216 +1,247 @@
-.home{
-    header.une-artiste{
-        height: 200px;
-        background-image: url('../img/artiste-une.jpg');
-        background-size: cover;
-        background-position: 0px -100px;
-        div{
-            background-color: rgba(0, 0, 0, 0.5);
-            padding: 15px;
-            display: flex;
-            justify-content: space-between;
-            h2{
-                color: white;
-                margin: 0;
-                span{
-                    font-weight: 400;
-                    font-size: 0.8em;
-                }
-            }
+.home {
+  header.une-artiste {
+    height: 200px;
+    background-image: url("../img/artiste-une.jpg");
+    background-size: cover;
+    background-position: 0px -100px;
+    div {
+      background-color: rgba(0, 0, 0, 0.5);
+      padding: 15px;
+      display: flex;
+      justify-content: space-between;
+      h2 {
+        color: white;
+        margin: 0;
+        span {
+          font-weight: 400;
+          font-size: 0.8em;
         }
+      }
     }
-    aside.lab-cta{
-        padding: 15px;
-        background-color: $orange;
+  }
+  aside.lab-cta {
+    padding: 15px;
+    background-image: url("../img/bgi-lab.png");
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    h3 {
+      margin: 0;
+      color: $blanc;
+      font-weight: 400;
+      font-size: 1.3em;
+    }
+  }
+  main {
+    section {
+      margin-top: 80px;
+      margin-bottom: 80px;
+      padding: 60px 0px;
+    }
+    section.trending {
+      padding-top: 0;
+      margin-top: 40px;
+      .gallery {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+    section.categories {
+      display: flex;
+      a {
+        text-decoration: none;
+      }
+      span {
+        position: relative;
+        color: #fff;
+        font-size: 2.5em;
+        font-weight: 600;
+      }
+      .left {
+        position: relative;
+        width: 50%;
+        height: 450px;
         display: flex;
-        justify-content: space-between;
+        justify-content: center;
         align-items: center;
-        h3{
-            margin: 0;
-            color: $blanc;
+        span {
+          font-size: 3.5em;
+        }
+        &::before {
+          content: "";
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          background-image: url("../img/tshirt-head.jpg");
+          background-size: cover;
+          background-position-y: center;
+          filter: brightness(50%);
+          transition: filter 0.5s ease;
+        }
+        &:hover::before {
+          filter: brightness(100%);
+        }
+      }
+      .right {
+        width: 50%;
+        .sweater {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          height: 225px;
+          position: relative;
+          &::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url("../img/sweater-head.jpg");
+            background-size: cover;
+            background-position-y: center;
+            filter: brightness(50%);
+            transition: filter 0.5s ease;
+          }
+          &:hover::before {
+            filter: brightness(100%);
+          }
+        }
+        .hoodie {
+          height: 225px;
+          position: relative;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          &::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url("../img/hoodie-head.jpg");
+            background-size: cover;
+            background-position-y: center;
+            filter: brightness(50%);
+            transition: filter 0.5s ease;
+          }
+          &:hover::before {
+            filter: brightness(100%);
+          }
+        }
+      }
+    }
+    section.lab-home {
+      background: linear-gradient(90deg, $beige 50%, $blanc 50%);
+      .flex {
+        align-items: center;
+      }
+      picture {
+        width: 50%;
+      }
+      div > div {
+        padding: 30px;
+        text-align: center;
+        width: 50%;
+        a {
+          margin: 20px 0px;
+          display: inline-block;
+        }
+      }
+      img {
+        width: 100%;
+      }
+    }
+    section.quote {
+      font-weight: 500;
+      background-image: url("../img/texture.png");
+      background-position: center bottom;
+      background-repeat: no-repeat;
+      text-align: right;
+      margin-bottom: 0px;
+      padding-bottom: 120px;
+      position: relative;
+      q {
+        font-size: 1.8em;
+        display: block;
+        padding-right: 30px;
+      }
+      cite {
+        display: inline-block;
+        padding: 20px 30px 0px 0px;
+        font-style: normal;
+        font-size: 1.5em;
+        color: $orange;
+        position: relative;
+        &::before {
+          content: " ";
+          position: absolute;
+          display: block;
+          transform: translate(-120%, 200%);
+          top: 50%;
+          left: 0;
+          width: 50px;
+          height: 4px;
+          background-color: $orange;
+        }
+      }
+    }
+    section.shop-adress {
+      background-image: url("../img/shop.jpg");
+      background-size: 130%;
+      background-position: 0 center;
+      height: 400px;
+      margin-top: 0;
+      & > div {
+        text-align: center;
+        color: white;
+        display: flex;
+        justify-content: flex-end;
+        & > div {
+          padding-right: 15%;
+          address {
+            font-style: normal;
+            font-family: $opensans;
+            font-size: 1.2em;
             font-weight: 400;
-            font-size: 1.3em;
+            p {
+              margin: 7px 0px;
+            }
+          }
         }
+        a {
+          margin-top: 30px;
+        }
+      }
     }
-    main{
-        section{
-            margin-top: 80px;
-            margin-bottom: 80px;
-            padding: 60px 0px;
+    section.news {
+      display: flex;
+      article {
+        margin: 0px 10px;
+        width: 320px;
+        height: 450px;
+        display: flex;
+        align-items: flex-end;
+        h2 {
+          color: $blanc;
+          font-size: 2.5em;
+          padding: 10px;
+          margin: 0;
         }
-        section.trending{
-            padding-top: 0;
-            margin-top: 40px;
+        &:first-child {
+          background-image: url("../img/news1.png");
         }
-        section.categories{
-            display: flex;
-            span{
-                position: relative;
-                color: #fff;
-                font-size: 2.5em;
-                font-weight: 600;
-            }
-            .left{
-                position: relative;
-                width: 50%;
-                height: 450px;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                span{
-                    font-size: 3.5em;
-                }
-                &::before {
-                    content: "";
-                    position: absolute;
-                    top: 0; left: 0;
-                    width: 100%; height: 100%;
-                    background-image: url('../img/tshirt-head.jpg');
-                    background-size: cover;
-                    background-position-y: center;
-                    filter: brightness(50%);
-                  }
-                  
-            }
-            .right{
-                width: 50%;
-                .sweater{
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
-                    height: 225px;
-                    position: relative;
-                    &::before {
-                        content: "";
-                        position: absolute;
-                        top: 0; left: 0;
-                        width: 100%; height: 100%;
-                        background-image: url('../img/sweater-head.jpg');
-                        background-size: cover;
-                        background-position-y: center;
-                        filter: brightness(50%);
-                      }
-                }
-                .hoodie{
-                    height: 225px;
-                    position: relative;
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
-                    &::before {
-                        content: "";
-                        position: absolute;
-                        top: 0; left: 0;
-                        width: 100%; height: 100%;
-                        background-image: url('../img/hoodie-head.jpg');
-                        background-size: cover;
-                        background-position-y: center;
-                        filter: brightness(50%);
-                      }
-                }
-            }
+        &:nth-child(2) {
+          background-image: url("../img/news2.png");
         }
-        section.lab-home{
-            background: linear-gradient(90deg, $beige 50%, $blanc 50%);
-            flex-direction: row;
-            div>div{
-                padding: 30px;
-                text-align: center;
-                a{
-                    margin: 20px 0px;
-                    display: inline-block;
-                }
-            }
-            img{
-                max-width: 550px;
-
-            }
+        &:nth-child(3) {
+          background-image: url("../img/news3.png");
         }
-        section.quote{
-            font-weight: 500;
-            background-image: url('../img/texture.png');
-            background-position: center bottom;
-            text-align: right;
-            margin-bottom: 0px;
-            padding-bottom: 120px;
-            q{
-                font-size: 1.8em;
-                display: block;
-                padding-right: 30px;
-                
-            }
-            cite{
-                display: inline-block;
-                padding: 20px 30px 0px 0px;
-                font-style: normal;
-                font-size: 1.5em;
-                color: $orange;
-                position: relative;
-                &::before{
-                    content: " ";
-                    position: absolute;
-                    display: block;
-                    transform: translate(-120%, 200%);
-                    top: 50%;
-                    left: 0;
-                    width: 50px;
-                    height: 4px;
-                    background-color: $orange;
-                }
-            }
-        }
-        section.shop-adress{
-           background-image: url("../img/shop.jpg");
-           background-size: 130%;
-           background-position: 0 center;
-           height: 400px;
-           margin-top: 0;
-           &>div{ 
-               text-align: center;
-               color: white;
-               display: flex;
-                justify-content: flex-end;
-               &>div{
-                padding-right: 15%;
-                    address{
-                        font-style: normal;
-                        font-family: $opensans;
-                        font-size: 1.2em;
-                        font-weight: 400;
-                        p{
-                            margin: 7px 0px;
-                        }
-                    }
-               }
-               a{
-                   margin-top: 30px;
-               }
-           }
-        }
-        section.news{
-            display: flex;
-            article{
-                margin: 0px 10px;
-                width: 320px;
-                height: 450px;
-                display: flex;
-                align-items: flex-end;
-                h2{
-                    color: $blanc;
-                    font-size: 2.5em;
-                    padding: 10px;
-                    margin: 0;
-                }
-                &:first-child{
-                    background-image: url('../img/news1.png');
-                }
-                &:nth-child(2){
-                    background-image: url('../img/news2.png');
-                }
-                &:nth-child(3){
-                    background-image: url('../img/news3.png');
-                }
-            }
-        }
+      }
     }
+  }
 }

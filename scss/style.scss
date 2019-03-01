@@ -59,6 +59,18 @@ p{
     font-size: 1.2em;
 }
 
+/* Icon fonts */
+
+// @font-face {
+//     font-family: "Parallax";
+//     src: url("../fonts/fontello-4e8b0606/font/parallax.woff2") format("woff2"),
+//            url("../fonts/fontello-4e8b0606/font/parallax.woff2") format("woff");
+// }
+
+i[class^="icon-"]:before, i[class*=" icon-"]:before {
+    margin: 0;
+  }
+
 /* Autres */
 
 .flex{
