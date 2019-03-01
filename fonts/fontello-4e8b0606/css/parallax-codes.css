@@ -1,0 +1,9 @@
+
+.icon-like-full:before { content: '\e800'; } /* '' */
+.icon-binoculars:before { content: '\e801'; } /* '' */
+.icon-coin:before { content: '\e802'; } /* '' */
+.icon-drawing:before { content: '\e803'; } /* '' */
+.icon-like:before { content: '\e804'; } /* '' */
+.icon-shirt:before { content: '\e805'; } /* '' */
+.icon-angle-up:before { content: '\f106'; } /* '' */
+.icon-angle-down:before { content: '\f107'; } /* '' */

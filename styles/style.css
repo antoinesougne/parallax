@@ -143,12 +143,6 @@ input[type=text]::placeholder, input[type=email]::placeholder, input[type=search
   background-color: rgba(0, 0, 0, 0.8);
 }
 
-.gallery .gallery-item div.preview div.overlay i {
-  color: #fff;
-  text-align: center;
-  width: 100%;
-}
-
 .gallery .gallery-item div.preview div.overlay a {
   width: 100%;
   margin: 5px 0px;
