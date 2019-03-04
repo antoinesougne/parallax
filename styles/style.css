@@ -6,6 +6,7 @@ a.primary-btn {
   font-size: 14px;
   font-weight: 500;
   min-width: 130px;
+  height: 38px;
   text-align: center;
   display: inline-block;
   border: 1px solid #C64800;
@@ -66,6 +67,7 @@ a.secondary-btn {
   font-size: 14px;
   font-weight: 500;
   min-width: 130px;
+  height: 38px;
   text-align: center;
   display: inline-block;
   border: 1px solid #fff;
@@ -318,52 +320,140 @@ input[type=text]::placeholder, input[type=email]::placeholder, input[type=search
 }
 
 nav.main-menu {
-  height: 100vh;
-  left: 0;
-  position: fixed;
-  width: 303px;
-  padding: 30px 0px 0px 20px;
+  position: static;
+  height: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-line-pack: start;
+      align-content: flex-start;
+  padding: 0.5rem;
 }
 
-nav.main-menu img {
-  width: 200px;
+nav.main-menu .menu-toggle {
+  display: block;
+  position: relative;
+  z-index: 1;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+   -ms-user-select: none;
+       user-select: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  cursor: pointer;
 }
 
-nav.main-menu a {
+nav.main-menu .menu-toggle input {
+  display: block;
+  width: 40px;
+  height: 32px;
+  position: absolute;
+  top: -7px;
+  left: -5px;
+  cursor: pointer;
+  opacity: 0;
+  z-index: 2;
+  -webkit-touch-callout: none;
+}
+
+nav.main-menu .menu-toggle input:checked ~ ul {
+  -webkit-transform: translate(0%, 0%);
+          transform: translate(0%, 0%);
+  overflow: hidden;
+}
+
+nav.main-menu .menu-toggle span {
+  display: block;
+  height: 3px;
+  margin-bottom: 6px;
+  background: #333;
+  z-index: 1;
+  width: 33px;
+  cursor: pointer;
+}
+
+nav.main-menu .menu-toggle a {
   text-decoration: none;
   color: #333;
 }
 
-nav.main-menu > ul {
-  padding-top: 30px;
-  padding-left: 0;
+nav.main-menu .menu-toggle > ul {
+  position: fixed;
   margin: 0;
+  padding: 0 1rem 1rem 0;
+  top: 0;
+  left: 0;
   list-style-type: none;
+  text-align: right;
+  width: 100vw;
+  height: 100vh;
+  -webkit-transform: translate(100%, 0%);
+          transform: translate(100%, 0%);
+  -webkit-transition: -webkit-transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
+  transition: -webkit-transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
+  transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
+  transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), -webkit-transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
+  background-color: #FAF6ED;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
 }
 
-nav.main-menu > ul label {
+nav.main-menu .menu-toggle > ul label {
   cursor: pointer;
   position: relative;
   color: #333;
   font-size: 1rem;
 }
 
-nav.main-menu > ul input {
+nav.main-menu .menu-toggle > ul label::after {
+  content: "\f106";
+  margin-left: 0.3em;
+  font-family: "parallax";
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+
+nav.main-menu .menu-toggle > ul input {
   display: none;
 }
 
-nav.main-menu > ul input:checked ~ ul.submenu {
+nav.main-menu .menu-toggle > ul input:checked ~ ul.submenu {
   max-height: 300px;
   -webkit-transition: max-height 0.5s ease-in;
   transition: max-height 0.5s ease-in;
 }
 
-nav.main-menu > ul li {
+nav.main-menu .menu-toggle > ul li {
   font-weight: 600;
   padding: 4px 0px;
 }
 
-nav.main-menu > ul li ul.submenu {
+nav.main-menu .menu-toggle > ul li ul.submenu {
   max-height: 0;
   overflow: hidden;
   -webkit-transition: max-height 0.5s ease-out;
@@ -374,10 +464,27 @@ nav.main-menu > ul li ul.submenu {
   padding-top: 5px;
 }
 
-nav.main-menu > ul li ul.submenu li {
+nav.main-menu .menu-toggle > ul li ul.submenu li {
   font-weight: 500;
   padding: 4px 0px;
   font-size: 0.8em;
+}
+
+nav.main-menu a.logo {
+  display: block;
+}
+
+nav.main-menu a.logo img {
+  width: 200px;
+}
+
+@media screen and (max-width: 1024px) {
+  nav.main-menu > ul {
+    text-align: right;
+  }
+  nav.main-menu .social {
+    display: none;
+  }
 }
 
 footer {
@@ -955,7 +1062,9 @@ main.item aside.suggestions {
   background-color: #FAF6ED;
 }
 
-.paiement div.resume, .paiement header, .paiement fieldset {
+.paiement div.resume,
+.paiement header,
+.paiement fieldset {
   background-color: #fff;
   border-color: #fff;
   border-radius: 10px;
@@ -1005,8 +1114,34 @@ main.item aside.suggestions {
   width: 60%;
 }
 
-.paiement .container .left fieldset.adresse input, .paiement .container .left fieldset.adresse select {
-  min-width: 0;
+.paiement .container .left fieldset {
+  border: 0px;
+}
+
+.paiement .container .left fieldset div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 0.5em 0em;
+  gap: 0.5em;
+}
+
+.paiement .container .left fieldset.adresse input,
+.paiement .container .left fieldset.adresse select {
+  width: 100%;
+  display: inline;
+}
+
+.paiement .container .left fieldset.livraison div, .paiement .container .left fieldset.paiement div {
+  background-color: rgba(240, 240, 240, 0.3);
+  background-color: rgba(240, 240, 240, 0.3);
+  border: 1px solid rgba(119, 119, 119, 0.3);
+  border-radius: 3px;
+  padding: 9px 0px 9px 5px;
+}
+
+.paiement .container .left fieldset.livraison div label, .paiement .container .left fieldset.paiement div label {
+  color: #3f3f3f;
 }
 
 .paiement .container .resume {
@@ -1017,7 +1152,9 @@ main.item aside.suggestions {
   width: 150px;
 }
 
-html *, html *::before, html *::after {
+html *,
+html *::before,
+html *::after {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
 }
@@ -1029,6 +1166,14 @@ body {
 .page-right {
   width: calc(100% - 303px);
   margin-left: 303px;
+}
+
+@media screen and (max-width: 1024px) {
+  .page-right {
+    margin-left: 0px;
+    margin: auto;
+    width: 100%;
+  }
 }
 
 .centered {
@@ -1068,7 +1213,8 @@ p {
 }
 
 /* Icon fonts */
-i[class^="icon-"]:before, i[class*=" icon-"]:before {
+i[class^="icon-"]:before,
+i[class*=" icon-"]:before {
   margin: 0;
 }
 

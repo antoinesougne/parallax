@@ -17,41 +17,47 @@
 
 <body class="home">
     <nav class="main-menu">
-        <a href="#"><img src="/img/logo.png" alt="Logo Parallax"></a>
-        <ul class="menu">
-            <li>
-                <input id="check01" type="checkbox" name="menu" checked />
-                <label for="check01">Shop</label>
-                <ul class="submenu">
-                    <li><a href="galerie.html"> T-shirt Homme</a></li>
-                    <li><a href="galerie.html"> T-shirt Femme</a></li>
-                    <li><a href="galerie.html"> Hoodie</a></li>
-                    <li><a href="galerie.html"> Sweater</a></li>
-                </ul>
-            </li>
-            <li><input id="check02" type="checkbox" name="menu" />
-                <label for="check02" class="orange">Le Lab</label>
-                <ul class="submenu">
-                    <li><a href=""> Atelier</a></li>
-                    <li><a href=""> Profil</a></li>
-                    <li><a href=""> Règlement</a></li>
-                </ul>
-            </li>
-            <li><input id="check03" type="checkbox" name="menu" />
-                <label for="check03">Collectif Parallax</label>
-                <ul class="submenu">
-                    <li><a href=""> Shop physique</a></li>
-                    <li><a href=""> Expositions</a></li>
-                </ul>
-            </li>
-            <li><a href=""> News</a></li>
-            <li><a href=""> Contact</a></li>
-            <li><a href=""> Aide</a></li>
-        </ul>
-        <ul>
-            <li><a href=""> Facebook</a></li>
-            <li><a href=""> Instagram</a></li>
-        </ul>
+        <a class="logo" href="#"><img src="/img/logo.png" alt="Logo Parallax"></a>
+        <div class="menu-toggle">
+            <input type="checkbox" />
+            <span></span>
+            <span></span>
+            <span></span>
+            <ul class="menu">
+                <li>
+                    <input id="check01" type="checkbox" name="menu" checked />
+                    <label for="check01">Shop</label>
+                    <ul class="submenu">
+                        <li><a href="galerie.html"> T-shirt Homme</a></li>
+                        <li><a href="galerie.html"> T-shirt Femme</a></li>
+                        <li><a href="galerie.html"> Hoodie</a></li>
+                        <li><a href="galerie.html"> Sweater</a></li>
+                    </ul>
+                </li>
+                <li><input id="check02" type="checkbox" name="menu" />
+                    <label for="check02" class="orange">Le Lab</label>
+                    <ul class="submenu">
+                        <li><a href=""> Atelier</a></li>
+                        <li><a href=""> Profil</a></li>
+                        <li><a href=""> Règlement</a></li>
+                    </ul>
+                </li>
+                <li><input id="check03" type="checkbox" name="menu" />
+                    <label for="check03">Collectif Parallax</label>
+                    <ul class="submenu">
+                        <li><a href=""> Shop physique</a></li>
+                        <li><a href=""> Expositions</a></li>
+                    </ul>
+                </li>
+                <li><a href=""> News</a></li>
+                <li><a href=""> Contact</a></li>
+                <li><a href=""> Aide</a></li>
+            </ul>
+            <!-- <ul class="social">
+                <li><a href=""> Facebook</a></li>
+                <li><a href=""> Instagram</a></li>
+            </ul> -->
+        </div>
     </nav>
     <div class="">
         <header class="une-artiste page-right">
@@ -256,33 +262,6 @@
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script>
         AOS.init();
-
-        let parallaxobjs;
-        let scrollpos;
-        readyHandler();
-
-        function readyHandler(ev) {
-            console.log("document is ready.");
-            parallaxobjs = document.querySelectorAll("q");
-            document.addEventListener("scroll", parallaxScrollHandler);
-            console.log(parallaxobjs);
-        }
-
-        function parallaxScrollHandler(ev) {
-            scrollpos = window.pageYOffset || document.documentElement.scrollTop;
-            parallaxobjs.forEach(el => {
-                let postop = el.offsetTop - scrollpos;
-                if (postop < window.innerHeight - 100 && postop >= 0) {
-                    //el.classList.add("inview");
-                    el.setAttribute(
-                        "style",
-                        `left: ${postop / window.innerHeight * 100}px`
-                    );
-                } else {
-                    //el.classList.remove("inview");
-                }
-            });
-        }
     </script>
 </body>
 

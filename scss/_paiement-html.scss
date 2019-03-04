@@ -1,49 +1,71 @@
-.paiement{
-    background-color: $beige;
-    div.resume, header, fieldset{
-        background-color: $blanc;
-        border-color: $blanc;
-        border-radius: 10px;
-        padding: 20px;
-        margin: 10px;
+.paiement {
+  background-color: $beige;
+  div.resume,
+  header,
+  fieldset {
+    background-color: $blanc;
+    border-color: $blanc;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 10px;
+  }
+  h2 {
+    margin: 0;
+  }
+  header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    h1 {
+      margin: 0;
     }
-    h2{
-        margin: 0;
+    img {
+      width: 200px;
     }
-    header{
-        width: 100%;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        h1{
-            margin: 0;
-        }
-        img{
-            width: 200px;
-        }
-        a{
-            color: $alert;
-        }
+    a {
+      color: $alert;
     }
-    .container{
-        display: flex;
-        flex: 1 1 0;
-        .left{
-            width: 60%;
-            fieldset{
-                &.adresse{
-                    input, select{
-                        min-width: 0;
-                    }
-                }
+  }
+  .container {
+    display: flex;
+    flex: 1 1 0;
+    .left {
+      width: 60%;
+      fieldset {
+        border: 0px;
+        div {
+          display: flex;
+          margin: 0.5em 0em;
+          gap: 0.5em;
+        }
+        &.adresse {
+          input,
+          select {
+            width: 100%;
+            display: inline;
+          }
+        }
+        &.livraison,
+        &.paiement {
+          div {
+            background-color: rgba(240, 240, 240, 0.3);
+            background-color: rgba(240, 240, 240, 0.3);
+            border: 1px solid rgba(119, 119, 119, 0.3);
+            border-radius: 3px;
+            padding: 9px 0px 9px 5px;
+            label {
+              color: rgb(63, 63, 63);
             }
+          }
         }
-        .resume{
-            width: 40%;
-            img{
-                width: 150px;
-            }
-        }
+      }
     }
-
+    .resume {
+      width: 40%;
+      img {
+        width: 150px;
+      }
+    }
+  }
 }

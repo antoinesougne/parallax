@@ -10,53 +10,62 @@
 @import "item-html";
 @import "paiement-html";
 
-
-html *, html *::before, html *::after{
-    box-sizing: border-box;
+html *,
+html *::before,
+html *::after {
+  box-sizing: border-box;
 }
 
-body{
-    font-family: $raleway;
+body {
+  font-family: $raleway;
 }
 
-.page-right{
-    width: calc(100% - 303px);
-    margin-left: 303px;
+.page-right {
+  width: calc(100% - 303px);
+  margin-left: 303px;
 }
 
-.centered{
-    width: 1024px;
+@media screen and (max-width: 1024px) {
+  .page-right {
+    margin-left: 0px;
     margin: auto;
+    width: 100%;
+  }
+}
+
+.centered {
+  width: 1024px;
+  margin: auto;
 }
 
 /* Titres */
-h1{
-    font-weight: 800;
+h1 {
+  font-weight: 800;
 }
 
-h2{
-    font-weight: 500;
-    font-size: 2em;
+h2 {
+  font-weight: 500;
+  font-size: 2em;
 }
 
-h3{
-    font-weight: 500;
-    font-size: 1.8em;
+h3 {
+  font-weight: 500;
+  font-size: 1.8em;
 }
-h4{
-    font-weight: 400;
-    font-size: 1.2em;
+h4 {
+  font-weight: 400;
+  font-size: 1.2em;
 }
 
 /* Paragraphes */
-p{
-    font-family: $opensans;
-    font-weight: 400;
+p {
+  font-family: $opensans;
+  font-weight: 400;
 }
 
-.tete-texte{
-    font-weight: 500;
-    font-size: 1.2em;
+.tete-texte {
+  font-weight: 500;
+  font-size: 1.2em;
 }
 
 /* Icon fonts */
@@ -67,21 +76,22 @@ p{
 //            url("../fonts/fontello-4e8b0606/font/parallax.woff2") format("woff");
 // }
 
-i[class^="icon-"]:before, i[class*=" icon-"]:before {
-    margin: 0;
-  }
+i[class^="icon-"]:before,
+i[class*=" icon-"]:before {
+  margin: 0;
+}
 
 /* Autres */
 
-.flex{
-    display: flex;
+.flex {
+  display: flex;
 }
-.space-between{
-    justify-content: space-between;
+.space-between {
+  justify-content: space-between;
 }
-.align-left{
-    text-align: left;
+.align-left {
+  text-align: left;
 }
-.orange{
-    color: $orange !important;
+.orange {
+  color: $orange !important;
 }
