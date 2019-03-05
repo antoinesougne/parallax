@@ -1,16 +1,22 @@
 nav.main-menu {
+  position: relative;
   .inline-menu {
     height: 100vh;
     left: 0;
     position: fixed;
     width: 270px;
     padding: 30px 0px 0px 20px;
+    display: flex;
+    flex-direction: column;
     img {
       width: 200px;
     }
     a {
       text-decoration: none;
       color: $text-color;
+      &:hover {
+        color: $orange !important;
+      }
     }
     & > ul {
       padding-top: 30px;
@@ -22,6 +28,9 @@ nav.main-menu {
         position: relative;
         color: $text-color;
         font-size: 1rem;
+        &:hover {
+          color: $orange !important;
+        }
         &::after {
         }
       }
@@ -55,6 +64,14 @@ nav.main-menu {
       display: block;
       img {
         width: 200px;
+      }
+    }
+    ul.sec-nav {
+      margin-top: auto;
+      transform: translateY(-50%);
+      li {
+        display: inline-block;
+        padding: 0em 0.5em;
       }
     }
   }
