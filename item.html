@@ -16,41 +16,86 @@
 
 <body>
     <nav class="main-menu">
-        <a href="index.html"><img src="/img/logo.png" alt="Logo Parallax"></a>
-        <ul class="menu">
-            <li>
-                <input id="check01" type="checkbox" name="menu" checked />
-                <label for="check01">Shop</label>
-                <ul class="submenu">
-                    <li><a href="galerie.html"> T-shirt Homme</a></li>
-                    <li><a href="galerie.html"> T-shirt Femme</a></li>
-                    <li><a href="galerie.html"> Hoodie</a></li>
-                    <li><a href="galerie.html"> Sweater</a></li>
+        <div class="mobile-menu">
+            <a class="logo" href="index.html"><img src="/img/logo.png" alt="Logo Parallax"></a>
+            <div class="menu-toggle ">
+                <input type="checkbox" />
+                <span></span>
+                <span></span>
+                <span></span>
+                <ul class="menu">
+                    <li>
+                        <input id="check01m" type="checkbox" name="menu" checked />
+                        <label for="check01m">Shop</label>
+                        <ul class="submenu">
+                            <li><a href="galerie.html"> T-shirt Homme</a></li>
+                            <li><a href="galerie.html"> T-shirt Femme</a></li>
+                            <li><a href="galerie.html"> Hoodie</a></li>
+                            <li><a href="galerie.html"> Sweater</a></li>
+                        </ul>
+                    </li>
+                    <li><input id="check02m" type="checkbox" name="menu" />
+                        <label for="check02m" class="orange">Le Lab</label>
+                        <ul class="submenu">
+                            <li><a href=""> Atelier</a></li>
+                            <li><a href=""> Profil</a></li>
+                            <li><a href=""> Règlement</a></li>
+                        </ul>
+                    </li>
+                    <li><input id="check03m" type="checkbox" name="menu" />
+                        <label for="check03m">Collectif Parallax</label>
+                        <ul class="submenu">
+                            <li><a href=""> Shop physique</a></li>
+                            <li><a href=""> Expositions</a></li>
+                        </ul>
+                    </li>
+                    <li><a href=""> News</a></li>
+                    <li><a href=""> Contact</a></li>
+                    <li><a href=""> Aide</a></li>
                 </ul>
-            </li>
-            <li><input id="check02" type="checkbox" name="menu" />
-                <label for="check02" class="orange">Le Lab</label>
-                <ul class="submenu">
-                    <li><a href=""> Atelier</a></li>
-                    <li><a href=""> Profil</a></li>
-                    <li><a href=""> Règlement</a></li>
-                </ul>
-            </li>
-            <li><input id="check03" type="checkbox" name="menu" />
-                <label for="check03">Collectif Parallax</label>
-                <ul class="submenu">
-                    <li><a href=""> Shop physique</a></li>
-                    <li><a href=""> Expositions</a></li>
-                </ul>
-            </li>
-            <li><a href=""> News</a></li>
-            <li><a href=""> Contact</a></li>
-            <li><a href=""> Aide</a></li>
-        </ul>
-        <ul class="social">
-            <li><a href=""> Facebook</a></li>
-            <li><a href=""> Instagram</a></li>
-        </ul>
+                <!-- <ul class="social">
+                            <li><a href=""> Facebook</a></li>
+                            <li><a href=""> Instagram</a></li>
+                        </ul> -->
+            </div>
+        </div>
+        <div class="inline-menu">
+            <a class="logo" href="index.html"><img src="/img/logo.png" alt="Logo Parallax"></a>
+            <ul class="menu">
+                <li>
+                    <input id="check01" type="checkbox" name="menu" checked />
+                    <label for="check01">Shop</label>
+                    <ul class="submenu">
+                        <li><a href="galerie.html"> T-shirt Homme</a></li>
+                        <li><a href="galerie.html"> T-shirt Femme</a></li>
+                        <li><a href="galerie.html"> Hoodie</a></li>
+                        <li><a href="galerie.html"> Sweater</a></li>
+                    </ul>
+                </li>
+                <li><input id="check02" type="checkbox" name="menu" />
+                    <label for="check02" class="orange">Le Lab</label>
+                    <ul class="submenu">
+                        <li><a href=""> Atelier</a></li>
+                        <li><a href=""> Profil</a></li>
+                        <li><a href=""> Règlement</a></li>
+                    </ul>
+                </li>
+                <li><input id="check03" type="checkbox" name="menu" />
+                    <label for="check03">Collectif Parallax</label>
+                    <ul class="submenu">
+                        <li><a href=""> Shop physique</a></li>
+                        <li><a href=""> Expositions</a></li>
+                    </ul>
+                </li>
+                <li><a href=""> News</a></li>
+                <li><a href=""> Contact</a></li>
+                <li><a href=""> Aide</a></li>
+            </ul>
+            <!-- <ul class="social">
+                        <li><a href=""> Facebook</a></li>
+                        <li><a href=""> Instagram</a></li>
+                    </ul> -->
+        </div>
     </nav>
     <main class="item page-right">
         <nav>

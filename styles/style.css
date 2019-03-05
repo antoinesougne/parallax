@@ -223,7 +223,7 @@ input[type=text]::placeholder, input[type=email]::placeholder, input[type=search
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  padding: 0px 60px;
+  padding: 0px 10%;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -237,8 +237,22 @@ input[type=text]::placeholder, input[type=email]::placeholder, input[type=search
 
 .gallery .gallery-item div.preview div.overlay i {
   color: white;
-  font-size: 6.5em;
+  font-size: 7rem;
   padding: 40px 0px;
+}
+
+@media screen and (min-width: 980px) and (max-width: 1599px) {
+  .gallery .gallery-item div.preview div.overlay i {
+    font-size: 5rem;
+    padding: 30px 0px;
+  }
+}
+
+@media screen and (max-width: 979px) {
+  .gallery .gallery-item div.preview div.overlay i {
+    font-size: 4rem;
+    padding: 20px 0px;
+  }
 }
 
 .gallery .gallery-item div.preview div.overlay a {
@@ -270,14 +284,14 @@ input[type=text]::placeholder, input[type=email]::placeholder, input[type=search
   color: #C64800;
 }
 
-@media only screen and (min-width: 1600px) {
+@media screen and (min-width: 1600px) {
   .gallery {
     -ms-grid-columns: (1fr)[4];
         grid-template-columns: repeat(4, 1fr);
   }
 }
 
-@media only screen and (min-width: 980px) and (max-width: 1599px) {
+@media screen and (min-width: 980px) and (max-width: 1599px) {
   .gallery {
     -ms-grid-columns: (1fr)[3];
         grid-template-columns: repeat(3, 1fr);
@@ -319,12 +333,81 @@ input[type=text]::placeholder, input[type=email]::placeholder, input[type=search
   color: #898989;
 }
 
-nav.main-menu {
+nav.main-menu .inline-menu {
+  height: 100vh;
+  left: 0;
+  position: fixed;
+  width: 270px;
+  padding: 30px 0px 0px 20px;
+}
+
+nav.main-menu .inline-menu img {
+  width: 200px;
+}
+
+nav.main-menu .inline-menu a {
+  text-decoration: none;
+  color: #333;
+}
+
+nav.main-menu .inline-menu > ul {
+  padding-top: 30px;
+  padding-left: 0;
+  margin: 0;
+  list-style-type: none;
+}
+
+nav.main-menu .inline-menu > ul label {
+  cursor: pointer;
+  position: relative;
+  color: #333;
+  font-size: 1rem;
+}
+
+nav.main-menu .inline-menu > ul input {
+  display: none;
+}
+
+nav.main-menu .inline-menu > ul input:checked ~ ul.submenu {
+  max-height: 300px;
+  -webkit-transition: max-height 0.5s ease-in;
+  transition: max-height 0.5s ease-in;
+}
+
+nav.main-menu .inline-menu > ul li {
+  font-weight: 600;
+  padding: 4px 0px;
+}
+
+nav.main-menu .inline-menu > ul li ul.submenu {
+  max-height: 0px;
+  overflow: hidden;
+  -webkit-transition: max-height 0.5s ease-out;
+  transition: max-height 0.5s ease-out;
+  min-width: 100%;
+  list-style: none;
+  padding-left: 20px;
+  padding-top: 5px;
+}
+
+nav.main-menu .inline-menu > ul li ul.submenu li {
+  font-weight: 500;
+  padding: 4px 0px;
+  font-size: 0.8em;
+}
+
+nav.main-menu .inline-menu a.logo {
+  display: block;
+}
+
+nav.main-menu .inline-menu a.logo img {
+  width: 200px;
+}
+
+nav.main-menu .mobile-menu {
   position: static;
   height: auto;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  display: none;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
@@ -333,7 +416,7 @@ nav.main-menu {
   padding: 0.5rem;
 }
 
-nav.main-menu .menu-toggle {
+nav.main-menu .mobile-menu .menu-toggle {
   display: block;
   position: relative;
   z-index: 1;
@@ -357,7 +440,7 @@ nav.main-menu .menu-toggle {
   cursor: pointer;
 }
 
-nav.main-menu .menu-toggle input {
+nav.main-menu .mobile-menu .menu-toggle input {
   display: block;
   width: 40px;
   height: 32px;
@@ -370,13 +453,13 @@ nav.main-menu .menu-toggle input {
   -webkit-touch-callout: none;
 }
 
-nav.main-menu .menu-toggle input:checked ~ ul {
+nav.main-menu .mobile-menu .menu-toggle input:checked ~ ul {
   -webkit-transform: translate(0%, 0%);
           transform: translate(0%, 0%);
   overflow: hidden;
 }
 
-nav.main-menu .menu-toggle span {
+nav.main-menu .mobile-menu .menu-toggle span {
   display: block;
   height: 3px;
   margin-bottom: 6px;
@@ -386,12 +469,12 @@ nav.main-menu .menu-toggle span {
   cursor: pointer;
 }
 
-nav.main-menu .menu-toggle a {
+nav.main-menu .mobile-menu .menu-toggle a {
   text-decoration: none;
   color: #333;
 }
 
-nav.main-menu .menu-toggle > ul {
+nav.main-menu .mobile-menu .menu-toggle > ul {
   position: fixed;
   margin: 0;
   padding: 0 1rem 1rem 0;
@@ -423,14 +506,14 @@ nav.main-menu .menu-toggle > ul {
           align-items: flex-end;
 }
 
-nav.main-menu .menu-toggle > ul label {
+nav.main-menu .mobile-menu .menu-toggle > ul label {
   cursor: pointer;
   position: relative;
   color: #333;
   font-size: 1rem;
 }
 
-nav.main-menu .menu-toggle > ul label::after {
+nav.main-menu .mobile-menu .menu-toggle > ul label::after {
   content: "\f106";
   margin-left: 0.3em;
   font-family: "parallax";
@@ -438,22 +521,22 @@ nav.main-menu .menu-toggle > ul label::after {
           transform: rotate(180deg);
 }
 
-nav.main-menu .menu-toggle > ul input {
+nav.main-menu .mobile-menu .menu-toggle > ul input {
   display: none;
 }
 
-nav.main-menu .menu-toggle > ul input:checked ~ ul.submenu {
+nav.main-menu .mobile-menu .menu-toggle > ul input:checked ~ ul.submenu {
   max-height: 300px;
   -webkit-transition: max-height 0.5s ease-in;
   transition: max-height 0.5s ease-in;
 }
 
-nav.main-menu .menu-toggle > ul li {
+nav.main-menu .mobile-menu .menu-toggle > ul li {
   font-weight: 600;
   padding: 4px 0px;
 }
 
-nav.main-menu .menu-toggle > ul li ul.submenu {
+nav.main-menu .mobile-menu .menu-toggle > ul li ul.submenu {
   max-height: 0;
   overflow: hidden;
   -webkit-transition: max-height 0.5s ease-out;
@@ -464,26 +547,42 @@ nav.main-menu .menu-toggle > ul li ul.submenu {
   padding-top: 5px;
 }
 
-nav.main-menu .menu-toggle > ul li ul.submenu li {
+nav.main-menu .mobile-menu .menu-toggle > ul li ul.submenu li {
   font-weight: 500;
   padding: 4px 0px;
   font-size: 0.8em;
 }
 
-nav.main-menu a.logo {
+nav.main-menu .mobile-menu a.logo {
   display: block;
 }
 
-nav.main-menu a.logo img {
+nav.main-menu .mobile-menu a.logo img {
   width: 200px;
 }
 
+nav.main-menu.dark .inline-menu {
+  background-color: #333;
+}
+
+nav.main-menu.dark .inline-menu * {
+  color: white;
+}
+
 @media screen and (max-width: 1024px) {
-  nav.main-menu > ul {
+  nav.main-menu .inline-menu {
+    display: none;
+  }
+  nav.main-menu .inline-menu > ul {
     text-align: right;
   }
-  nav.main-menu .social {
+  nav.main-menu .inline-menu .social {
     display: none;
+  }
+  nav.main-menu .mobile-menu {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
   }
 }
 
@@ -538,7 +637,14 @@ footer .copyright {
   height: 200px;
   background-image: url("../img/artiste-une.jpg");
   background-size: cover;
-  background-position: 0px -100px;
+  background-position: center -100px;
+  background-repeat: no-repeat;
+}
+
+@media only screen and (max-width: 979px) {
+  .home header.une-artiste {
+    background-position: center;
+  }
 }
 
 .home header.une-artiste div {
@@ -591,14 +697,15 @@ footer .copyright {
   padding: 60px 0px;
 }
 
+@media only screen and (max-width: 979px) {
+  .home main section {
+    margin: 0 auto;
+  }
+}
+
 .home main section.trending {
   padding-top: 0;
   margin-top: 40px;
-}
-
-.home main section.trending .gallery {
-  -ms-grid-columns: (1fr)[3];
-      grid-template-columns: repeat(3, 1fr);
 }
 
 .home main section.categories {
@@ -743,10 +850,28 @@ footer .copyright {
   background: linear-gradient(90deg, #FAF6ED 50%, #fff 50%);
 }
 
-.home main section.lab-home .flex {
+@media screen and (max-width: 979px) {
+  .home main section.lab-home {
+    background: #FAF6ED;
+  }
+}
+
+.home main section.lab-home .offset {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+@media screen and (max-width: 979px) {
+  .home main section.lab-home .offset {
+    display: block;
+  }
 }
 
 .home main section.lab-home picture {
@@ -759,6 +884,13 @@ footer .copyright {
   width: 50%;
 }
 
+@media screen and (max-width: 979px) {
+  .home main section.lab-home div > div {
+    width: 100%;
+    display: block;
+  }
+}
+
 .home main section.lab-home div > div a {
   margin: 20px 0px;
   display: inline-block;
@@ -768,9 +900,16 @@ footer .copyright {
   width: 100%;
 }
 
+@media screen and (max-width: 979px) {
+  .home main section.lab-home img {
+    display: none;
+  }
+}
+
 .home main section.quote {
   font-weight: 500;
   background-image: url("../img/texture.png");
+  background-size: cover;
   background-position: center bottom;
   background-repeat: no-repeat;
   text-align: right;
@@ -809,8 +948,8 @@ footer .copyright {
 
 .home main section.shop-adress {
   background-image: url("../img/shop.jpg");
-  background-size: 130%;
-  background-position: 0 center;
+  background-size: cover;
+  background-position: center;
   height: 400px;
   margin-top: 0;
 }
@@ -851,6 +990,12 @@ footer .copyright {
   display: flex;
 }
 
+@media screen and (max-width: 979px) {
+  .home main section.news {
+    display: block;
+  }
+}
+
 .home main section.news article {
   margin: 0px 10px;
   width: 320px;
@@ -861,6 +1006,12 @@ footer .copyright {
   -webkit-box-align: end;
       -ms-flex-align: end;
           align-items: flex-end;
+}
+
+@media screen and (max-width: 979px) {
+  .home main section.news article {
+    margin: 10px auto;
+  }
 }
 
 .home main section.news article h2 {
@@ -880,6 +1031,21 @@ footer .copyright {
 
 .home main section.news article:nth-child(3) {
   background-image: url("../img/news3.png");
+}
+
+@media screen and (min-width: 980px) and (max-width: 1599px) {
+  .home section.trending .gallery .gallery-item:last-child {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 979px) {
+  .home section.lab-home img {
+    display: none;
+  }
+  .home section.lab-home div {
+    width: 100%;
+  }
 }
 
 main.galerie section.filtres {
@@ -1171,7 +1337,6 @@ body {
 @media screen and (max-width: 1024px) {
   .page-right {
     margin-left: 0px;
-    margin: auto;
     width: 100%;
   }
 }
@@ -1219,18 +1384,6 @@ i[class*=" icon-"]:before {
 }
 
 /* Autres */
-.flex {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.space-between {
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-}
-
 .align-left {
   text-align: left;
 }

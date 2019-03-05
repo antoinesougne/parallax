@@ -29,7 +29,7 @@
         left: 0;
         display: flex;
         flex-direction: column;
-        padding: 0px 60px;
+        padding: 0px 10%;
         align-items: center;
         justify-content: center;
         width: 100%;
@@ -37,8 +37,16 @@
         background-color: rgba(0, 0, 0, 0.8);
         i {
           color: white;
-          font-size: 6.5em;
+          font-size: 7rem;
           padding: 40px 0px;
+          @media screen and (min-width: 980px) and (max-width: 1599px) {
+            font-size: 5rem;
+            padding: 30px 0px;
+          }
+          @media screen and (max-width: 979px) {
+            font-size: 4rem;
+            padding: 20px 0px;
+          }
         }
         a {
           width: 100%;
@@ -67,13 +75,13 @@
   }
 }
 
-@media only screen and (min-width: 1600px) {
+@media screen and (min-width: 1600px) {
   .gallery {
     grid-template-columns: repeat(4, 1fr);
   }
 }
 
-@media only screen and (min-width: 980px) and (max-width: 1599px) {
+@media screen and (min-width: 980px) and (max-width: 1599px) {
   .gallery {
     grid-template-columns: repeat(3, 1fr);
   }

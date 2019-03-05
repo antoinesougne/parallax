@@ -17,12 +17,51 @@
 
 <body class="home">
     <nav class="main-menu">
-        <a class="logo" href="#"><img src="/img/logo.png" alt="Logo Parallax"></a>
-        <div class="menu-toggle">
-            <input type="checkbox" />
-            <span></span>
-            <span></span>
-            <span></span>
+        <div class="mobile-menu">
+            <a class="logo" href="#"><img src="/img/logo.png" alt="Logo Parallax"></a>
+            <div class="menu-toggle ">
+                <input type="checkbox" />
+                <span></span>
+                <span></span>
+                <span></span>
+                <ul class="menu">
+                    <li>
+                        <input id="check01m" type="checkbox" name="menu" checked />
+                        <label for="check01m">Shop</label>
+                        <ul class="submenu">
+                            <li><a href="galerie.html"> T-shirt Homme</a></li>
+                            <li><a href="galerie.html"> T-shirt Femme</a></li>
+                            <li><a href="galerie.html"> Hoodie</a></li>
+                            <li><a href="galerie.html"> Sweater</a></li>
+                        </ul>
+                    </li>
+                    <li><input id="check02m" type="checkbox" name="menu" />
+                        <label for="check02m" class="orange">Le Lab</label>
+                        <ul class="submenu">
+                            <li><a href=""> Atelier</a></li>
+                            <li><a href=""> Profil</a></li>
+                            <li><a href=""> Règlement</a></li>
+                        </ul>
+                    </li>
+                    <li><input id="check03m" type="checkbox" name="menu" />
+                        <label for="check03m">Collectif Parallax</label>
+                        <ul class="submenu">
+                            <li><a href=""> Shop physique</a></li>
+                            <li><a href=""> Expositions</a></li>
+                        </ul>
+                    </li>
+                    <li><a href=""> News</a></li>
+                    <li><a href=""> Contact</a></li>
+                    <li><a href=""> Aide</a></li>
+                </ul>
+                <!-- <ul class="social">
+                    <li><a href=""> Facebook</a></li>
+                    <li><a href=""> Instagram</a></li>
+                </ul> -->
+            </div>
+        </div>
+        <div class="inline-menu">
+            <a class="logo" href="#"><img src="/img/logo.png" alt="Logo Parallax"></a>
             <ul class="menu">
                 <li>
                     <input id="check01" type="checkbox" name="menu" checked />
@@ -140,6 +179,23 @@
                             <p>by <span>Eugenesky</span></p>
                         </div>
                     </article>
+                    <article class="gallery-item">
+                        <div class="preview">
+                            <img src="img/takeiteasy.png" alt="">
+                            <div class="overlay">
+                                <i class="icon-like"></i>
+                                <a href="item.html" class="primary-btn">Voir le produit</a>
+                                <a href="paiement.html" class="secondary-btn">Ajouter au panier</a>
+                            </div>
+                        </div>
+                        <div class="infos">
+                            <p>Take it easy</p>
+                            <p>25€</p>
+                        </div>
+                        <div class="author">
+                            <p>by <span>Eugenesky</span></p>
+                        </div>
+                    </article>
                 </div>
             </section>
             <section class="categories page-right">
@@ -152,7 +208,7 @@
                 </div>
             </section>
             <section class="lab-home ">
-                <div class="page-right flex space-between">
+                <div class="page-right offset">
                     <picture>
                         <source srcset="img/home-lab.webp" type="image/webp">
                         <source srcset="img/home-lab.jpg" type="image/jpeg">

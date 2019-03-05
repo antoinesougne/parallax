@@ -23,12 +23,8 @@ body {
 .page-right {
   width: calc(100% - 303px);
   margin-left: 303px;
-}
-
-@media screen and (max-width: 1024px) {
-  .page-right {
+  @media screen and (max-width: 1024px) {
     margin-left: 0px;
-    margin: auto;
     width: 100%;
   }
 }
@@ -83,12 +79,6 @@ i[class*=" icon-"]:before {
 
 /* Autres */
 
-.flex {
-  display: flex;
-}
-.space-between {
-  justify-content: space-between;
-}
 .align-left {
   text-align: left;
 }
