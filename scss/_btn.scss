@@ -10,7 +10,6 @@ a.primary-btn {
   text-align: center;
   display: inline-block;
   border: 1px solid $orange;
-  transition: background-color 0.3s ease-in-out;
   position: relative;
   span {
     display: inline-block;
@@ -42,8 +41,8 @@ a.primary-btn {
     right: 1rem;
   }
   &:hover {
-    background-color: rgb(199, 73, 0);
-    border: 1px solid rgb(199, 73, 0);
+    background-color: rgb(153, 56, 0);
+    border: 1px solid rgb(153, 56, 0);
   }
 }
 
@@ -60,7 +59,6 @@ a.secondary-btn {
   text-align: center;
   display: inline-block;
   border: 1px solid $blanc;
-  transition: background-color 0.3s ease-in-out;
   position: relative;
   span {
     display: inline-block;
@@ -90,5 +88,9 @@ a.secondary-btn {
   &:hover svg {
     opacity: 1;
     right: 1rem;
+  }
+  &:hover {
+    background-color: rgb(221, 221, 221);
+    border: 1px solid rgb(221, 221, 221);
   }
 }

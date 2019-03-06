@@ -1,13 +1,13 @@
 .paiement {
-  background-color: $beige;
-  div.resume,
+  background-color: #ededed;
+  div.panier,
   header,
   fieldset {
     background-color: $blanc;
     border-color: $blanc;
     border-radius: 10px;
     padding: 20px;
-    margin: 10px;
+    margin: 10px 0px;
   }
   h2 {
     margin: 0;
@@ -29,9 +29,9 @@
   }
   .container {
     display: flex;
-    flex: 1 1 0;
+    gap: 1em;
     .left {
-      width: 60%;
+      flex-grow: 1;
       fieldset {
         border: 0px;
         div {
@@ -61,11 +61,11 @@
         }
       }
     }
-    .resume {
-      width: 40%;
-      img {
-        width: 150px;
-      }
+    .panier {
+      height: auto;
+      position: static;
+      width: auto;
+      max-width: auto;
     }
   }
 }

@@ -1,0 +1,72 @@
+main.profil {
+  position: relative;
+  section {
+    margin-top: 0;
+    padding-top: 0;
+  }
+  section.infos-profil {
+    max-width: 340px;
+    margin-top: 0;
+    padding-top: 0;
+    background-color: #eeeeee;
+    position: fixed;
+    top: 0;
+    height: 100vh;
+    padding: 1em;
+    text-align: center;
+    h2 {
+      margin-top: 0;
+    }
+    & > img:first-of-type {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 3px solid white;
+    }
+    h4 {
+      margin: 1em 0 0;
+      font-weight: 500;
+      font-size: 1.4em;
+    }
+    .email {
+      font-weight: 300;
+    }
+    .stats {
+      display: flex;
+      justify-content: space-around;
+      & > div p:first-child {
+        font-size: 1.2em;
+      }
+      & > div p:last-child {
+        color: $orange;
+        font-size: 1.2em;
+      }
+    }
+    .best-sellers {
+      div {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1em;
+      }
+      img {
+        width: 90px;
+        background-color: #fff;
+      }
+    }
+  }
+  section.all {
+    margin-left: calc(340px + 2%);
+
+    .tri {
+      display: flex;
+      justify-content: flex-end;
+      padding-right: 30px;
+      gap: 1em;
+    }
+    .gallery {
+      grid-template-columns: repeat(2, 1fr);
+      margin-top: 20px;
+    }
+  }
+}

@@ -1,81 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Parallax</title>
-    <link
-      href="https://fonts.googleapis.com/css?family=Raleway:400,500,700,800"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-    <link rel="stylesheet" href="/fonts/fontello-4e8b0606/css/parallax.css" />
-    <link rel="stylesheet" href="/styles/style.css" />
-    <link rel="stylesheet" href="/styles/normalize.css" />
-  </head>
 
-  <body class="home">
-    <nav class="main-menu">
-      <div class="mobile-menu">
-        <a class="logo" href="#"
-          ><img src="/img/logo.png" alt="Logo Parallax"
-        /></a>
-        <div class="menu-toggle ">
-          <input type="checkbox" />
-          <span></span>
-          <span></span>
-          <span></span>
-          <ul class="menu">
-            <li>
-              <input id="check01m" type="checkbox" name="menu" checked />
-              <label for="check01m">Shop</label>
-              <ul class="submenu">
-                <li><a href="galerie.html"> T-shirt Homme</a></li>
-                <li><a href="galerie.html"> T-shirt Femme</a></li>
-                <li><a href="galerie.html"> Hoodie</a></li>
-                <li><a href="galerie.html"> Sweater</a></li>
-              </ul>
-            </li>
-            <li>
-              <input id="check02m" type="checkbox" name="menu" />
-              <label for="check02m">Le Lab</label>
-              <ul class="submenu">
-                <li><a href=""> Atelier</a></li>
-                <li><a href=""> Profil</a></li>
-                <li><a href=""> Règlement</a></li>
-              </ul>
-            </li>
-            <li>
-              <input id="check03m" type="checkbox" name="menu" />
-              <label for="check03m">Collectif Parallax</label>
-              <ul class="submenu">
-                <li><a href=""> Shop physique</a></li>
-                <li><a href=""> Expositions</a></li>
-              </ul>
-            </li>
-            <li><a href=""> News</a></li>
-            <li><a href=""> Contact</a></li>
-            <li><a href=""> Aide</a></li>
-          </ul>
-          <!-- <ul class="social">
-                    <li><a href=""> Facebook</a></li>
-                    <li><a href=""> Instagram</a></li>
-                </ul> -->
-        </div>
-      </div>
-      <div class="inline-menu">
-        <a class="logo" href="#"
-          ><img src="/img/logo.png" alt="Logo Parallax"
-        /></a>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>Parallax</title>
+  <link href="https://fonts.googleapis.com/css?family=Raleway:400,500,700,800" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600" rel="stylesheet" />
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+  <link rel="stylesheet" href="/fonts/fontello-4e8b0606/css/parallax.css" />
+  <link rel="stylesheet" href="/styles/style.css" />
+  <link rel="stylesheet" href="/styles/normalize.css" />
+</head>
+
+<body class="home">
+  <div class="layer none"></div>
+  <nav class="main-menu">
+    <div class="mobile-menu">
+      <a class="logo" href="#"><img src="/img/logo.png" alt="Logo Parallax" /></a>
+      <div class="menu-toggle ">
+        <input type="checkbox" />
+        <span></span>
+        <span></span>
+        <span></span>
         <ul class="menu">
           <li>
-            <input id="check01" type="checkbox" name="menu" checked />
-            <label for="check01">Shop</label>
+            <input id="check01m" type="checkbox" name="menu" checked />
+            <label for="check01m">Shop</label>
             <ul class="submenu">
               <li><a href="galerie.html"> T-shirt Homme</a></li>
               <li><a href="galerie.html"> T-shirt Femme</a></li>
@@ -84,8 +36,8 @@
             </ul>
           </li>
           <li>
-            <input id="check02" type="checkbox" name="menu" />
-            <label for="check02">Le Lab</label>
+            <input id="check02m" type="checkbox" name="menu" />
+            <label for="check02m">Le Lab</label>
             <ul class="submenu">
               <li><a href=""> Atelier</a></li>
               <li><a href=""> Profil</a></li>
@@ -93,8 +45,8 @@
             </ul>
           </li>
           <li>
-            <input id="check03" type="checkbox" name="menu" />
-            <label for="check03">Collectif Parallax</label>
+            <input id="check03m" type="checkbox" name="menu" />
+            <label for="check03m">Collectif Parallax</label>
             <ul class="submenu">
               <li><a href=""> Shop physique</a></li>
               <li><a href=""> Expositions</a></li>
@@ -104,369 +56,309 @@
           <li><a href=""> Contact</a></li>
           <li><a href=""> Aide</a></li>
         </ul>
-        <ul class="social">
-          <li><a href=""> Facebook</a></li>
-          <li><a href=""> Instagram</a></li>
-        </ul>
-        <ul class="sec-nav">
-          <li><a href=""> Mon compte</a></li>
-          <li><a href="" class="link-panier"> Panier</a></li>
-        </ul>
+        <!-- <ul class="social">
+                    <li><a href=""> Facebook</a></li>
+                    <li><a href=""> Instagram</a></li>
+                </ul> -->
       </div>
-      <div class="panier hidden">
-        <h2>Panier</h2>
-        <div>
-          <img src="img/takeiteasy.png" alt="" />
-          <div>
-            <h4>Take it easy</h4>
-            <p>Taille: M</p>
-            <p>Quantité: 1</p>
-          </div>
-          <span>25€</span>
-        </div>
-        <div>
-          <p>Livraison</p>
-          <p>5€</p>
-        </div>
-        <div>
-          <p>Total:</p>
-          <p>30€</p>
-        </div>
-        <a href="paiement.html" class="primary-btn">Valider la commande</a>
+    </div>
+    <div class="inline-menu">
+      <a class="logo" href="index.html"><img src="/img/logo.png" alt="Logo Parallax" /></a>
+      <ul class="menu">
+        <li>
+          <input id="check01" type="checkbox" name="menu" checked />
+          <label for="check01">Shop</label>
+          <ul class="submenu">
+            <li><a href="galerie.html"> T-shirt Homme</a></li>
+            <li><a href="galerie.html"> T-shirt Femme</a></li>
+            <li><a href="galerie.html"> Hoodie</a></li>
+            <li><a href="galerie.html"> Sweater</a></li>
+          </ul>
+        </li>
+        <li>
+          <input id="check02" type="checkbox" name="menu" />
+          <label for="check02">Le Lab</label>
+          <ul class="submenu">
+            <li><a href=""> Atelier</a></li>
+            <li><a href=""> Profil</a></li>
+            <li><a href=""> Règlement</a></li>
+          </ul>
+        </li>
+        <li>
+          <input id="check03" type="checkbox" name="menu" />
+          <label for="check03">Collectif Parallax</label>
+          <ul class="submenu">
+            <li><a href=""> Shop physique</a></li>
+            <li><a href=""> Expositions</a></li>
+          </ul>
+        </li>
+        <li><a href=""> News</a></li>
+        <li><a href=""> Contact</a></li>
+        <li><a href=""> Aide</a></li>
+      </ul>
+      <ul class="social">
+        <li><a href=""> Facebook</a></li>
+        <li><a href=""> Instagram</a></li>
+      </ul>
+      <div class="sec-nav">
+        <a href=""> Mon compte |</a> <a href="" class="link-panier">Panier (<span> 1 </span>)</a>
       </div>
-    </nav>
+    </div>
+    <div class="panier hidden">
+      <h3>Panier</h3>
+      <div class="item">
+        <img src="img/items/takeiteasy.png" alt="" />
+        <div>
+          <h4>Take it easy</h4>
+          <p>Taille: M</p>
+          <p>Quantité: 1</p>
+        </div>
+        <span>25€</span>
+      </div>
+      <div class="livraison">
+        <p>Livraison</p>
+        <p>5€</p>
+      </div>
+      <div class="total">
+        <p>Total:</p>
+        <p>30€</p>
+      </div>
+      <a href="paiement.html" class="primary-btn">Valider la commande</a>
+    </div>
+  </nav>
 
-    <div class="">
-      <header class="une-artiste page-right">
-        <div>
-          <h2>John Wayne <span>est l'artiste à la une</span></h2>
-          <a href="#" class="primary-btn"
-            ><span>Découvrir</span>
-            <svg
-              version="1.1"
-              id="Layer_1"
-              xmlns="http://www.w3.org/2000/svg"
-              xmlns:xlink="http://www.w3.org/1999/xlink"
-              x="0px"
-              y="0px"
-              viewBox="0 0 36.1 25.8"
-              enable-background="new 0 0 36.1 25.8"
-              xml:space="preserve"
-            >
-              <g>
-                <line
-                  fill="none"
-                  stroke-width="3"
-                  stroke-miterlimit="10"
-                  x1="0"
-                  y1="12.9"
-                  x2="34"
-                  y2="12.9"
-                ></line>
-                <polyline
-                  fill="none"
-                  stroke-width="3"
-                  stroke-miterlimit="10"
-                  points="22.2,1.1 34,12.9 22.2,24.7   "
-                ></polyline>
-              </g>
-            </svg>
-          </a>
-        </div>
-      </header>
-      <aside data-aos="flip-up" class="lab-cta page-right">
-        <h3>Rejoins notre communauté de plus de 4.000 artistes</h3>
-        <a href="#" class="secondary-btn"
-          ><span>Le Lab</span
-          ><svg
-            version="1.1"
-            id="Layer_1"
-            xmlns="http://www.w3.org/2000/svg"
-            xmlns:xlink="http://www.w3.org/1999/xlink"
-            x="0px"
-            y="0px"
-            viewBox="0 0 36.1 25.8"
-            enable-background="new 0 0 36.1 25.8"
-            xml:space="preserve"
-          >
+  <div class="">
+
+    <header class="une-artiste page-right">
+      <div>
+        <h2>John Wayne <span>est l'artiste à la une</span></h2>
+        <a href="profil.html" class="primary-btn"><span>Découvrir</span>
+          <svg version="1.1" class="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+            x="0px" y="0px" viewBox="0 0 36.1 25.8" enable-background="new 0 0 36.1 25.8" xml:space="preserve">
             <g>
-              <line
-                fill="none"
-                stroke-width="3"
-                stroke-miterlimit="10"
-                x1="0"
-                y1="12.9"
-                x2="34"
-                y2="12.9"
-              ></line>
-              <polyline
-                fill="none"
-                stroke-width="3"
-                stroke-miterlimit="10"
-                points="22.2,1.1 34,12.9 22.2,24.7   "
-              ></polyline>
-            </g></svg
-        ></a>
-      </aside>
-      <main>
-        <section class="trending container page-right">
-          <h2>Trending</h2>
-          <div class="gallery">
-            <article class="gallery-item">
-              <div class="preview">
-                <img src="img/takeiteasy.png" alt="" />
-                <div class="overlay">
-                  <i class="icon-like"></i>
-                  <a href="item.html" class="primary-btn">Voir le produit</a>
-                  <a href="paiement.html" class="secondary-btn"
-                    >Ajouter au panier</a
-                  >
-                </div>
+              <line fill="none" stroke-width="3" stroke-miterlimit="10" x1="0" y1="12.9" x2="34" y2="12.9"></line>
+              <polyline fill="none" stroke-width="3" stroke-miterlimit="10" points="22.2,1.1 34,12.9 22.2,24.7   "></polyline>
+            </g>
+          </svg>
+        </a>
+      </div>
+    </header>
+    <aside data-aos="flip-up" class="lab-cta page-right">
+      <h3>Rejoins notre communauté de plus de 4.000 artistes</h3>
+      <a href="#" class="secondary-btn"><span>Le Lab</span><svg version="1.1" class="Layer_1" xmlns="http://www.w3.org/2000/svg"
+          xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 36.1 25.8" enable-background="new 0 0 36.1 25.8"
+          xml:space="preserve">
+          <g>
+            <line fill="none" stroke-width="3" stroke-miterlimit="10" x1="0" y1="12.9" x2="34" y2="12.9"></line>
+            <polyline fill="none" stroke-width="3" stroke-miterlimit="10" points="22.2,1.1 34,12.9 22.2,24.7   "></polyline>
+          </g>
+        </svg></a>
+    </aside>
+    <main>
+      <section class="trending container page-right">
+        <h2>Trending</h2>
+        <div class="gallery">
+          <article data-aos="fade-up" data-aos-delay="300" class="gallery-item">
+            <div class="preview">
+              <img src="img/items/takeiteasy.png" alt="" />
+              <div class="overlay">
+                <i class="icon-like"></i>
+                <a href="item.html" class="primary-btn">Voir le produit</a>
+                <a href="paiement.html" class="secondary-btn">Ajouter au panier</a>
+
               </div>
-              <div class="infos">
-                <p>Take it easy</p>
-                <p>25€</p>
-              </div>
-              <div class="author">
-                <p>
-                  by <a href=""><span>Eugenesky</span></a>
-                </p>
-              </div>
-            </article>
-            <article class="gallery-item">
-              <div class="preview">
-                <img src="img/takeiteasy.png" alt="" />
-                <div class="overlay">
-                  <i class="icon-like"></i>
-                  <a href="item.html" class="primary-btn">Voir le produit</a>
-                  <a href="paiement.html" class="secondary-btn"
-                    >Ajouter au panier</a
-                  >
-                </div>
-              </div>
-              <div class="infos">
-                <p>Take it easy</p>
-                <p>25€</p>
-              </div>
-              <div class="author">
-                <p>
-                  by <a href=""><span>Eugenesky</span></a>
-                </p>
-              </div>
-            </article>
-            <article class="gallery-item">
-              <div class="preview">
-                <img src="img/takeiteasy.png" alt="" />
-                <div class="overlay">
-                  <i class="icon-like"></i>
-                  <a href="item.html" class="primary-btn">Voir le produit</a>
-                  <a href="paiement.html" class="secondary-btn"
-                    >Ajouter au panier</a
-                  >
-                </div>
-              </div>
-              <div class="infos">
-                <p>Take it easy</p>
-                <p>25€</p>
-              </div>
-              <div class="author">
-                <p>
-                  by <a href=""><span>Eugenesky</span></a>
-                </p>
-              </div>
-            </article>
-            <article class="gallery-item">
-              <div class="preview">
-                <img src="img/takeiteasy.png" alt="" />
-                <div class="overlay">
-                  <i class="icon-like"></i>
-                  <a href="item.html" class="primary-btn">Voir le produit</a>
-                  <a href="paiement.html" class="secondary-btn"
-                    >Ajouter au panier</a
-                  >
-                </div>
-              </div>
-              <div class="infos">
-                <p>Take it easy</p>
-                <p>25€</p>
-              </div>
-              <div class="author">
-                <p>by <span>Eugenesky</span></p>
-              </div>
-            </article>
-          </div>
-        </section>
-        <section class="categories page-right">
-          <div data-aos="flip-right" class="left">
-            <a href="galerie.html"><span>T-shirts</span></a>
-          </div>
-          <div data-aos="flip-left" class="right">
-            <div class="sweater">
-              <a href="galerie.html"><span>Sweaters</span></a>
             </div>
-            <div class="hoodie">
-              <a href="galerie.html"><span>Hoodies</span></a>
+            <div class="infos">
+              <p>Take it easy</p>
+              <p>25€</p>
             </div>
-          </div>
-        </section>
-        <section class="lab-home ">
-          <div class="page-right offset">
-            <picture>
-              <source srcset="img/home-lab.webp" type="image/webp" />
-              <source srcset="img/home-lab.jpg" type="image/jpeg" />
-              <img src="img/home-lab.jpg" alt="Homme en t-shirt" />
-            </picture>
-            <div data-aos="fade-left">
-              <h3 class="">Tu te sens d'humeur créative ?</h3>
-              <p class="tete-texte">Découvre le lab !</p>
-              <p class="">
-                Essaye tout de suite notre module de personnalisation de
-                vêtements. Mauris et vehicula erat. Nam inurna sed sapien
-                fringilla egestas. Vestibulum vehicula nec purus a ullamcorper.
+            <div class="author">
+              <p>
+                by <a href="profil.html"><span>Eugenesky</span></a>
               </p>
-              <a href="#" class="primary-btn"
-                ><span>Découvrir</span>
-                <svg
-                  version="1.1"
-                  id="Layer_1"
-                  xmlns="http://www.w3.org/2000/svg"
-                  xmlns:xlink="http://www.w3.org/1999/xlink"
-                  x="0px"
-                  y="0px"
-                  viewBox="0 0 36.1 25.8"
-                  enable-background="new 0 0 36.1 25.8"
-                  xml:space="preserve"
-                >
-                  <g>
-                    <line
-                      fill="none"
-                      stroke-width="3"
-                      stroke-miterlimit="10"
-                      x1="0"
-                      y1="12.9"
-                      x2="34"
-                      y2="12.9"
-                    ></line>
-                    <polyline
-                      fill="none"
-                      stroke-width="3"
-                      stroke-miterlimit="10"
-                      points="22.2,1.1 34,12.9 22.2,24.7   "
-                    ></polyline>
-                  </g>
-                </svg>
-              </a>
             </div>
-          </div>
-        </section>
-        <section class="quote ">
-          <div class="page-right">
-            <q class="left"
-              >Lorem ipsum dolor sit amet, consectetur adipiscing elit praesent,
-              lorem ipsum dolor sit amet, consectetur adipiscing elit sed et.</q
-            >
-            <cite class="right">Un intellectuel</cite>
-          </div>
-        </section>
-        <section class="shop-adress ">
-          <div class="page-right">
-            <div>
-              <h2>Nous rendre visite</h2>
-              <address>
-                <p>Rue de la casquette 24</p>
-                <p>4000, Liège</p>
-                <p>Belgique</p>
-              </address>
-              <a href="#" class="primary-btn"
-                ><span>Itinéraire</span
-                ><svg
-                  version="1.1"
-                  id="Layer_1"
-                  xmlns="http://www.w3.org/2000/svg"
-                  xmlns:xlink="http://www.w3.org/1999/xlink"
-                  x="0px"
-                  y="0px"
-                  viewBox="0 0 36.1 25.8"
-                  enable-background="new 0 0 36.1 25.8"
-                  xml:space="preserve"
-                >
-                  <g>
-                    <line
-                      fill="none"
-                      stroke-width="3"
-                      stroke-miterlimit="10"
-                      x1="0"
-                      y1="12.9"
-                      x2="34"
-                      y2="12.9"
-                    ></line>
-                    <polyline
-                      fill="none"
-                      stroke-width="3"
-                      stroke-miterlimit="10"
-                      points="22.2,1.1 34,12.9 22.2,24.7   "
-                    ></polyline>
-                  </g></svg
-              ></a>
+          </article>
+          <article data-aos="fade-up" data-aos-delay="300" class="gallery-item">
+            <div class="preview">
+              <img src="img/items/out-cast.png" alt="" />
+              <div class="overlay">
+                <i class="icon-like"></i>
+                <a href="item.html" class="primary-btn">Voir le produit</a>
+                <a href="paiement.html" class="secondary-btn">Ajouter au panier</a>
+              </div>
             </div>
+            <div class="infos">
+              <p>Out Cast</p>
+              <p>25€</p>
+            </div>
+            <div class="author">
+              <p>
+                by <a href=""><span>John Wayne</span></a>
+              </p>
+            </div>
+          </article>
+          <article data-aos="fade-up" data-aos-delay="300" class="gallery-item">
+            <div class="preview">
+              <img src="img/items/peaceforever.png" alt="" />
+              <div class="overlay">
+                <i class="icon-like"></i>
+                <a href="item.html" class="primary-btn">Voir le produit</a>
+                <a href="paiement.html" class="secondary-btn">Ajouter au panier</a>
+              </div>
+            </div>
+            <div class="infos">
+              <p>Peace Forever</p>
+              <p>25€</p>
+            </div>
+            <div class="author">
+              <p>
+                by <a href=""><span>Pakalupapito</span></a>
+              </p>
+            </div>
+          </article>
+          <article class="gallery-item">
+            <div class="preview">
+              <img src="img/items/peaceforever.png" alt="" />
+              <div class="overlay">
+                <i class="icon-like"></i>
+                <a href="item.html" class="primary-btn">Voir le produit</a>
+                <a href="paiement.html" class="secondary-btn">Ajouter au panier</a>
+              </div>
+            </div>
+            <div class="infos">
+              <p>Take it easy</p>
+              <p>25€</p>
+            </div>
+            <div class="author">
+              <p>by <span>Eugenesky</span></p>
+            </div>
+          </article>
+        </div>
+      </section>
+      <section class="categories page-right">
+        <div data-aos="flip-right" class="left">
+          <a href="galerie.html"><span>T-shirts</span></a>
+        </div>
+        <div data-aos="flip-left" class="right">
+          <div class="sweater">
+            <a href="galerie.html"><span>Sweaters</span></a>
           </div>
-        </section>
-        <section class="news page-right">
-          <article>
-            <h2>Lorem ipsum dolore sit</h2>
-          </article>
-          <article>
-            <h2>Lorem ipsum dolore sit</h2>
-          </article>
-          <article>
-            <h2>Lorem ipsum dolore sit</h2>
-          </article>
-        </section>
-      </main>
-      <footer>
+          <div class="hoodie">
+            <a href="galerie.html"><span>Hoodies</span></a>
+          </div>
+        </div>
+      </section>
+      <section class="lab-home ">
+        <div class="page-right offset">
+          <picture>
+            <source srcset="img/home-lab.webp" type="image/webp" />
+            <source srcset="img/home-lab.jpg" type="image/jpeg" />
+            <img src="img/home-lab.jpg" alt="Homme en t-shirt" />
+          </picture>
+          <div data-aos="fade-left">
+            <h3 class="">Tu te sens d'humeur créative ?</h3>
+            <p class="tete-texte">Découvre le lab !</p>
+            <p class="">
+              Essaye tout de suite notre module de personnalisation de
+              vêtements. Mauris et vehicula erat. Nam inurna sed sapien
+              fringilla egestas. Vestibulum vehicula nec purus a ullamcorper.
+            </p>
+            <a href="#" class="primary-btn"><span>Découvrir</span>
+              <svg version="1.1" class="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                x="0px" y="0px" viewBox="0 0 36.1 25.8" enable-background="new 0 0 36.1 25.8" xml:space="preserve">
+                <g>
+                  <line fill="none" stroke-width="3" stroke-miterlimit="10" x1="0" y1="12.9" x2="34" y2="12.9"></line>
+                  <polyline fill="none" stroke-width="3" stroke-miterlimit="10" points="22.2,1.1 34,12.9 22.2,24.7   "></polyline>
+                </g>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </section>
+      <section class="quote ">
+        <div class="page-right">
+          <q class="left">L'uniformisation à outrance tue la créativité et oublie que chaque être humain brille par son
+            originalité.</q>
+          <cite class="right">Patrick Louis Richard</cite>
+        </div>
+      </section>
+      <section class="shop-adress ">
         <div class="page-right">
           <div>
-            <h4>Shop</h4>
-            <ul>
-              <li><a href=""> Homme</a></li>
-              <li><a href=""> Femme</a></li>
-              <li><a href=""> Hoodies</a></li>
-              <li><a href=""> Sweater</a></li>
-            </ul>
-          </div>
-          <div>
-            <h4>à propos</h4>
-            <ul>
-              <li><a href=""> À propos de Parallax</a></li>
-              <li><a href=""> Contact</a></li>
-            </ul>
-          </div>
-          <div>
-            <h4>support</h4>
-            <ul>
-              <li><a href=""> Retours et remboursements</a></li>
-              <li><a href=""> FAQ</a></li>
-              <li><a href=""> Service client</a></li>
-              <li><a href=""> Règlement du Lab</a></li>
-            </ul>
-          </div>
-          <div>
-            <h4>legal</h4>
-            <ul>
-              <li><a href=""> Termes et conditions</a></li>
-              <li><a href=""> Politique de confidentialité</a></li>
-            </ul>
+            <h2>Nous rendre visite</h2>
+            <address>
+              <p>Rue de la casquette 24</p>
+              <p>4000, Liège</p>
+              <p>Belgique</p>
+            </address>
+            <a href="#" class="primary-btn"><span>Itinéraire</span><svg version="1.1" class="Layer_1" xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 36.1 25.8" enable-background="new 0 0 36.1 25.8"
+                xml:space="preserve">
+                <g>
+                  <line fill="none" stroke-width="3" stroke-miterlimit="10" x1="0" y1="12.9" x2="34" y2="12.9"></line>
+                  <polyline fill="none" stroke-width="3" stroke-miterlimit="10" points="22.2,1.1 34,12.9 22.2,24.7   "></polyline>
+                </g>
+              </svg></a>
           </div>
         </div>
-        <div class="copyright page-right">
-          <p>© parallax 2019</p>
+      </section>
+      <section class="news page-right">
+        <article>
+          <h2>Lorem ipsum dolore sit</h2>
+        </article>
+        <article>
+          <h2>Lorem ipsum dolore sit</h2>
+        </article>
+        <article>
+          <h2>Lorem ipsum dolore sit</h2>
+        </article>
+      </section>
+    </main>
+    <footer>
+      <div class="page-right">
+        <div>
+          <h4>Shop</h4>
+          <ul>
+            <li><a href=""> Homme</a></li>
+            <li><a href=""> Femme</a></li>
+            <li><a href=""> Hoodies</a></li>
+            <li><a href=""> Sweater</a></li>
+          </ul>
         </div>
-      </footer>
-    </div>
-    <script src="scripts/main.js"></script>
-    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-    <script>
-      AOS.init();
-    </script>
-  </body>
+        <div>
+          <h4>à propos</h4>
+          <ul>
+            <li><a href=""> À propos de Parallax</a></li>
+            <li><a href=""> Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>support</h4>
+          <ul>
+            <li><a href=""> Retours et remboursements</a></li>
+            <li><a href=""> FAQ</a></li>
+            <li><a href=""> Service client</a></li>
+            <li><a href=""> Règlement du Lab</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>legal</h4>
+          <ul>
+            <li><a href=""> Termes et conditions</a></li>
+            <li><a href=""> Politique de confidentialité</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="copyright page-right">
+        <p>© parallax 2019</p>
+      </div>
+    </footer>
+  </div>
+  <script src="scripts/main.js"></script>
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+</body>
+
 </html>

@@ -10,8 +10,6 @@ a.primary-btn {
   text-align: center;
   display: inline-block;
   border: 1px solid #C64800;
-  -webkit-transition: background-color 0.3s ease-in-out;
-  transition: background-color 0.3s ease-in-out;
   position: relative;
 }
 
@@ -54,8 +52,8 @@ a.primary-btn:hover svg {
 }
 
 a.primary-btn:hover {
-  background-color: #c74900;
-  border: 1px solid #c74900;
+  background-color: #993800;
+  border: 1px solid #993800;
 }
 
 a.secondary-btn {
@@ -71,8 +69,6 @@ a.secondary-btn {
   text-align: center;
   display: inline-block;
   border: 1px solid #fff;
-  -webkit-transition: background-color 0.3s ease-in-out;
-  transition: background-color 0.3s ease-in-out;
   position: relative;
 }
 
@@ -112,6 +108,11 @@ a.secondary-btn svg * {
 a.secondary-btn:hover svg {
   opacity: 1;
   right: 1rem;
+}
+
+a.secondary-btn:hover {
+  background-color: #dddddd;
+  border: 1px solid #dddddd;
 }
 
 select {
@@ -196,17 +197,24 @@ input[type=text]::placeholder, input[type=email]::placeholder, input[type=search
 .gallery .gallery-item div.preview {
   background-color: #FAF6ED;
   position: relative;
+  height: 400px;
+  overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-line-pack: end;
+      align-content: flex-end;
 }
 
 .gallery .gallery-item div.preview:hover .overlay {
   opacity: 1;
+  -webkit-transition: opacity 0.3s ease;
+  transition: opacity 0.3s ease;
 }
 
 .gallery .gallery-item div.preview img {
-  -o-object-fit: contain;
-     object-fit: contain;
-  -o-object-position: center bottom;
-     object-position: center bottom;
+  -o-object-fit: cover;
+     object-fit: cover;
   width: 100%;
 }
 
@@ -423,15 +431,19 @@ nav.main-menu .inline-menu a.logo img {
   width: 200px;
 }
 
-nav.main-menu .inline-menu ul.sec-nav {
+nav.main-menu .inline-menu div.sec-nav {
   margin-top: auto;
-  -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
+  -webkit-transform: translateY(-100%);
+          transform: translateY(-100%);
 }
 
-nav.main-menu .inline-menu ul.sec-nav li {
-  display: inline-block;
-  padding: 0em 0.5em;
+nav.main-menu .inline-menu div.sec-nav a {
+  font-weight: 500;
+}
+
+nav.main-menu .inline-menu div.sec-nav a span {
+  color: #C64800;
+  font-weight: 700;
 }
 
 nav.main-menu .mobile-menu {
@@ -617,9 +629,8 @@ nav.main-menu.dark .inline-menu * {
 }
 
 .panier {
-  width: 300px;
   height: 100vh;
-  padding: 2%;
+  padding: 1%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -632,16 +643,31 @@ nav.main-menu.dark .inline-menu * {
           justify-content: flex-start;
   position: absolute;
   background-color: #fff;
-  left: 270px;
+  right: 0;
   z-index: 9999;
-  overflow: hidden;
+  overflow-x: hidden;
+  max-width: 300px;
+  -webkit-transform: translateX(0%);
+          transform: translateX(0%);
+  -webkit-transition: -webkit-transform 0.5s ease;
+  transition: -webkit-transform 0.5s ease;
+  transition: transform 0.5s ease;
+  transition: transform 0.5s ease, -webkit-transform 0.5s ease;
+}
+
+.panier h3 {
+  margin-top: 0;
+}
+
+.panier p {
+  font-size: 0.8em;
 }
 
 .panier img {
-  width: 100px;
-  height: 120px;
-  -o-object-fit: contain;
-     object-fit: contain;
+  width: 80px;
+  height: 80px;
+  -o-object-fit: cover;
+     object-fit: cover;
   background-color: #FAF6ED;
 }
 
@@ -652,14 +678,24 @@ nav.main-menu.dark .inline-menu * {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  gap: 1em;
 }
 
 .panier h4 {
   margin: 0;
 }
 
+.panier div.total {
+  border-top: 1px solid #9c9c9c;
+}
+
 .hidden {
-  display: none;
+  -webkit-transform: translateX(100%);
+          transform: translateX(100%);
+  -webkit-transition: -webkit-transform 0.5s ease;
+  transition: -webkit-transform 0.5s ease;
+  transition: transform 0.5s ease;
+  transition: transform 0.5s ease, -webkit-transform 0.5s ease;
 }
 
 footer {
@@ -695,6 +731,10 @@ footer > div ul li a {
   text-decoration: none;
   font-family: "Open Sans", sans-serif;
   font-weight: 300;
+}
+
+footer > div ul li a:hover {
+  color: #C64800;
 }
 
 footer .copyright {
@@ -995,7 +1035,7 @@ footer .copyright {
 }
 
 .home main section.quote q {
-  font-size: 1.8em;
+  font-size: 1.9em;
   display: block;
   padding-right: 30px;
 }
@@ -1301,17 +1341,17 @@ main.item aside.suggestions {
 }
 
 .paiement {
-  background-color: #FAF6ED;
+  background-color: #ededed;
 }
 
-.paiement div.resume,
+.paiement div.panier,
 .paiement header,
 .paiement fieldset {
   background-color: #fff;
   border-color: #fff;
   border-radius: 10px;
   padding: 20px;
-  margin: 10px;
+  margin: 10px 0px;
 }
 
 .paiement h2 {
@@ -1347,13 +1387,13 @@ main.item aside.suggestions {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-flex: 1;
-      -ms-flex: 1 1 0px;
-          flex: 1 1 0;
+  gap: 1em;
 }
 
 .paiement .container .left {
-  width: 60%;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
 }
 
 .paiement .container .left fieldset {
@@ -1386,12 +1426,107 @@ main.item aside.suggestions {
   color: #3f3f3f;
 }
 
-.paiement .container .resume {
-  width: 40%;
+.paiement .container .panier {
+  height: auto;
+  position: static;
+  width: auto;
+  max-width: auto;
 }
 
-.paiement .container .resume img {
+main.profil {
+  position: relative;
+}
+
+main.profil section {
+  margin-top: 0;
+  padding-top: 0;
+}
+
+main.profil section.infos-profil {
+  max-width: 340px;
+  margin-top: 0;
+  padding-top: 0;
+  background-color: #eeeeee;
+  position: fixed;
+  top: 0;
+  height: 100vh;
+  padding: 1em;
+  text-align: center;
+}
+
+main.profil section.infos-profil h2 {
+  margin-top: 0;
+}
+
+main.profil section.infos-profil > img:first-of-type {
   width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border: 3px solid white;
+}
+
+main.profil section.infos-profil h4 {
+  margin: 1em 0 0;
+  font-weight: 500;
+  font-size: 1.4em;
+}
+
+main.profil section.infos-profil .email {
+  font-weight: 300;
+}
+
+main.profil section.infos-profil .stats {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+main.profil section.infos-profil .stats > div p:first-child {
+  font-size: 1.2em;
+}
+
+main.profil section.infos-profil .stats > div p:last-child {
+  color: #C64800;
+  font-size: 1.2em;
+}
+
+main.profil section.infos-profil .best-sellers div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 1em;
+}
+
+main.profil section.infos-profil .best-sellers img {
+  width: 90px;
+  background-color: #fff;
+}
+
+main.profil section.all {
+  margin-left: calc(340px + 2%);
+}
+
+main.profil section.all .tri {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  padding-right: 30px;
+  gap: 1em;
+}
+
+main.profil section.all .gallery {
+  -ms-grid-columns: (1fr)[2];
+      grid-template-columns: repeat(2, 1fr);
+  margin-top: 20px;
 }
 
 html *,
@@ -1403,6 +1538,7 @@ html *::after {
 
 body {
   font-family: "Raleway", sans-serif;
+  overflow-x: hidden;
 }
 
 .page-right {
@@ -1466,5 +1602,43 @@ i[class*=" icon-"]:before {
 
 .orange {
   color: #C64800 !important;
+}
+
+.layer {
+  position: fixed;
+  opacity: 0.7;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+  margin-left: 303px;
+  z-index: 9998;
+  background-color: rgba(0, 0, 0, 0.4);
+  display: block;
+}
+
+.none {
+  display: none;
+}
+
+.visible {
+  display: block !important;
+}
+
+div.top-sec-nav {
+  width: 100%;
+  height: 30px;
+  text-align: right;
+  padding: 10px 30px 0px 0px;
+}
+
+div.top-sec-nav a {
+  font-weight: 500;
+  text-decoration: none;
+}
+
+div.top-sec-nav a span {
+  color: #C64800;
+  font-weight: 700;
 }
 /*# sourceMappingURL=style.css.map */

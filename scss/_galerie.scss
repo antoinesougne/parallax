@@ -13,12 +13,16 @@
     div.preview {
       background-color: $beige;
       position: relative;
+      height: 400px;
+      overflow: hidden;
+      display: flex;
+      align-content: flex-end;
       &:hover .overlay {
         opacity: 1;
+        transition: opacity 0.3s ease;
       }
       img {
-        object-fit: contain;
-        object-position: center bottom;
+        object-fit: cover;
         width: 100%;
       }
       div.overlay {

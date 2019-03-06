@@ -16,9 +16,10 @@
 </head>
 
 <body class="home">
+    <div class="layer none"></div>
     <nav class="main-menu">
         <div class="mobile-menu">
-            <a class="logo" href="index.html"><img src="/img/logo.png" alt="Logo Parallax"></a>
+            <a class="logo" href="#"><img src="/img/logo.png" alt="Logo Parallax" /></a>
             <div class="menu-toggle ">
                 <input type="checkbox" />
                 <span></span>
@@ -35,15 +36,17 @@
                             <li><a href="galerie.html"> Sweater</a></li>
                         </ul>
                     </li>
-                    <li><input id="check02m" type="checkbox" name="menu" />
-                        <label for="check02m" class="orange">Le Lab</label>
+                    <li>
+                        <input id="check02m" type="checkbox" name="menu" />
+                        <label for="check02m">Le Lab</label>
                         <ul class="submenu">
                             <li><a href=""> Atelier</a></li>
                             <li><a href=""> Profil</a></li>
                             <li><a href=""> Règlement</a></li>
                         </ul>
                     </li>
-                    <li><input id="check03m" type="checkbox" name="menu" />
+                    <li>
+                        <input id="check03m" type="checkbox" name="menu" />
                         <label for="check03m">Collectif Parallax</label>
                         <ul class="submenu">
                             <li><a href=""> Shop physique</a></li>
@@ -55,13 +58,13 @@
                     <li><a href=""> Aide</a></li>
                 </ul>
                 <!-- <ul class="social">
-                                    <li><a href=""> Facebook</a></li>
-                                    <li><a href=""> Instagram</a></li>
-                                </ul> -->
+                            <li><a href=""> Facebook</a></li>
+                            <li><a href=""> Instagram</a></li>
+                        </ul> -->
             </div>
         </div>
         <div class="inline-menu">
-            <a class="logo" href="index.html"><img src="/img/logo.png" alt="Logo Parallax"></a>
+            <a class="logo" href="index.html"><img src="/img/logo.png" alt="Logo Parallax" /></a>
             <ul class="menu">
                 <li>
                     <input id="check01" type="checkbox" name="menu" checked />
@@ -73,15 +76,17 @@
                         <li><a href="galerie.html"> Sweater</a></li>
                     </ul>
                 </li>
-                <li><input id="check02" type="checkbox" name="menu" />
-                    <label for="check02" class="orange">Le Lab</label>
+                <li>
+                    <input id="check02" type="checkbox" name="menu" />
+                    <label for="check02">Le Lab</label>
                     <ul class="submenu">
                         <li><a href=""> Atelier</a></li>
                         <li><a href=""> Profil</a></li>
                         <li><a href=""> Règlement</a></li>
                     </ul>
                 </li>
-                <li><input id="check03" type="checkbox" name="menu" />
+                <li>
+                    <input id="check03" type="checkbox" name="menu" />
                     <label for="check03">Collectif Parallax</label>
                     <ul class="submenu">
                         <li><a href=""> Shop physique</a></li>
@@ -92,13 +97,37 @@
                 <li><a href=""> Contact</a></li>
                 <li><a href=""> Aide</a></li>
             </ul>
-            <!-- <ul class="social">
-                                <li><a href=""> Facebook</a></li>
-                                <li><a href=""> Instagram</a></li>
-                            </ul> -->
+            <ul class="social">
+                <li><a href=""> Facebook</a></li>
+                <li><a href=""> Instagram</a></li>
+            </ul>
+        </div>
+        <div class="panier hidden">
+            <h3>Panier</h3>
+            <div class="item">
+                <img src="img/items/takeiteasy.png" alt="" />
+                <div>
+                    <h4>Take it easy</h4>
+                    <p>Taille: M</p>
+                    <p>Quantité: 1</p>
+                </div>
+                <span>25€</span>
+            </div>
+            <div class="livraison">
+                <p>Livraison</p>
+                <p>5€</p>
+            </div>
+            <div class="total">
+                <p>Total:</p>
+                <p>30€</p>
+            </div>
+            <a href="paiement.html" class="primary-btn">Valider la commande</a>
         </div>
     </nav>
     <main class="galerie page-right">
+        <div class="top-sec-nav">
+            <a href=""> Mon compte |</a> <a href="" class="link-panier">Panier (<span> 1 </span>)</a>
+        </div>
         <section class="filtres">
             <div class="top-filtres">
                 <select name="type" id="type">
@@ -107,18 +136,18 @@
                     <option value="hoodie">Hoodie</option>
                     <option value="sweater">Sweater</option>
                 </select>
-                <select name="type" id="type">
+                <select name="genre" id="genre">
                     <option value="">Genre</option>
                     <option value="tshirt">Homme</option>
                     <option value="hoodie">Femme</option>
                 </select>
-                <select name="type" id="type">
+                <select name="taille" id="taille">
                     <option value="">Taille</option>
                     <option value="tshirt">S</option>
                     <option value="hoodie">M</option>
                     <option value="sweater">L</option>
                 </select>
-                <select name="type" id="type">
+                <select name="couleur" id="couleur">
                     <option value="">Couleur</option>
                     <option value="tshirt">Blanc</option>
                     <option value="hoodie">Noir</option>
@@ -126,7 +155,7 @@
                     <option value="sweater">Rouge</option>
                     <option value="sweater">Bleu</option>
                 </select>
-                <select name="type" id="type">
+                <select name="prix" id="prix">
                     <option value="">Gamme de prix</option>
                     <option value="tshirt">- de 20€</option>
                     <option value="">+ de 20€</option>
@@ -135,10 +164,10 @@
             <div class="mid-filtres">
                 <div>
                     <label for="artiste">Artiste :</label>
-                    <input type="search" placeholder="Rechercher">
+                    <input type="search" id="artiste" placeholder="Rechercher">
                 </div>
                 <div>
-                    <select name="type" id="type">
+                    <select name="certified" id="certified">
                         <option value="">Artiste vérifié</option>
                         <option value="tshirt">Oui</option>
                         <option value="">Non</option>
@@ -153,12 +182,12 @@
                 </div>
                 <div>
                     <p>Tri :</p>
-                    <select name="type" id="type">
+                    <select name="popularite" id="popularite">
                         <option value="">Popularité</option>
                         <option value="tshirt">- de 20€</option>
                         <option value="">+ de 20€</option>
                     </select>
-                    <select name="type" id="type">
+                    <select name="date" id="date">
                         <option value="">Aujourd'hui</option>
                         <option value="tshirt">- de 20€</option>
                         <option value="">+ de 20€</option>
@@ -169,11 +198,12 @@
         <section class="gallery">
             <article data-aos="fade-up" data-aos-delay="300" class="gallery-item">
                 <div class="preview">
-                    <img src="img/takeiteasy.png" alt="">
+                    <img src="img/items/takeiteasy.png" alt="" />
                     <div class="overlay">
                         <i class="icon-like"></i>
                         <a href="item.html" class="primary-btn">Voir le produit</a>
                         <a href="paiement.html" class="secondary-btn">Ajouter au panier</a>
+
                     </div>
                 </div>
                 <div class="infos">
@@ -181,12 +211,14 @@
                     <p>25€</p>
                 </div>
                 <div class="author">
-                    <p>by <span>Eugenesky</span></p>
+                    <p>
+                        by <a href=""><span>Eugenesky</span></a>
+                    </p>
                 </div>
             </article>
             <article data-aos="fade-up" data-aos-delay="300" class="gallery-item">
                 <div class="preview">
-                    <img src="img/takeiteasy.png" alt="">
+                    <img src="img/items/out-cast.png" alt="" />
                     <div class="overlay">
                         <i class="icon-like"></i>
                         <a href="item.html" class="primary-btn">Voir le produit</a>
@@ -194,16 +226,18 @@
                     </div>
                 </div>
                 <div class="infos">
-                    <p>Take it easy</p>
+                    <p>Out Cast</p>
                     <p>25€</p>
                 </div>
                 <div class="author">
-                    <p>by <span>Eugenesky</span></p>
+                    <p>
+                        by <a href=""><span>John Wayne</span></a>
+                    </p>
                 </div>
             </article>
             <article data-aos="fade-up" data-aos-delay="300" class="gallery-item">
                 <div class="preview">
-                    <img src="img/takeiteasy.png" alt="">
+                    <img src="img/items/peaceforever.png" alt="" />
                     <div class="overlay">
                         <i class="icon-like"></i>
                         <a href="item.html" class="primary-btn">Voir le produit</a>
@@ -211,20 +245,23 @@
                     </div>
                 </div>
                 <div class="infos">
-                    <p>Take it easy</p>
+                    <p>Peace Forever</p>
                     <p>25€</p>
                 </div>
                 <div class="author">
-                    <p>by <span>Eugenesky</span></p>
+                    <p>
+                        by <a href=""><span>Pakalupapito</span></a>
+                    </p>
                 </div>
             </article>
             <article data-aos="fade-up" data-aos-delay="300" class="gallery-item">
                 <div class="preview">
-                    <img src="img/takeiteasy.png" alt="">
+                    <img src="img/items/takeiteasy.png" alt="" />
                     <div class="overlay">
                         <i class="icon-like"></i>
                         <a href="item.html" class="primary-btn">Voir le produit</a>
                         <a href="paiement.html" class="secondary-btn">Ajouter au panier</a>
+
                     </div>
                 </div>
                 <div class="infos">
@@ -232,12 +269,14 @@
                     <p>25€</p>
                 </div>
                 <div class="author">
-                    <p>by <span>Eugenesky</span></p>
+                    <p>
+                        by <a href=""><span>Eugenesky</span></a>
+                    </p>
                 </div>
             </article>
             <article data-aos="fade-up" data-aos-delay="300" class="gallery-item">
                 <div class="preview">
-                    <img src="img/takeiteasy.png" alt="">
+                    <img src="img/items/out-cast.png" alt="" />
                     <div class="overlay">
                         <i class="icon-like"></i>
                         <a href="item.html" class="primary-btn">Voir le produit</a>
@@ -245,16 +284,18 @@
                     </div>
                 </div>
                 <div class="infos">
-                    <p>Take it easy</p>
+                    <p>Out Cast</p>
                     <p>25€</p>
                 </div>
                 <div class="author">
-                    <p>by <span>Eugenesky</span></p>
+                    <p>
+                        by <a href=""><span>John Wayne</span></a>
+                    </p>
                 </div>
             </article>
             <article data-aos="fade-up" data-aos-delay="300" class="gallery-item">
                 <div class="preview">
-                    <img src="img/takeiteasy.png" alt="">
+                    <img src="img/items/peaceforever.png" alt="" />
                     <div class="overlay">
                         <i class="icon-like"></i>
                         <a href="item.html" class="primary-btn">Voir le produit</a>
@@ -262,20 +303,23 @@
                     </div>
                 </div>
                 <div class="infos">
-                    <p>Take it easy</p>
+                    <p>Peace Forever</p>
                     <p>25€</p>
                 </div>
                 <div class="author">
-                    <p>by <span>Eugenesky</span></p>
+                    <p>
+                        by <a href=""><span>Pakalupapito</span></a>
+                    </p>
                 </div>
             </article>
             <article data-aos="fade-up" data-aos-delay="300" class="gallery-item">
                 <div class="preview">
-                    <img src="img/takeiteasy.png" alt="">
+                    <img src="img/items/takeiteasy.png" alt="" />
                     <div class="overlay">
                         <i class="icon-like"></i>
                         <a href="item.html" class="primary-btn">Voir le produit</a>
                         <a href="paiement.html" class="secondary-btn">Ajouter au panier</a>
+
                     </div>
                 </div>
                 <div class="infos">
@@ -283,12 +327,14 @@
                     <p>25€</p>
                 </div>
                 <div class="author">
-                    <p>by <span>Eugenesky</span></p>
+                    <p>
+                        by <a href=""><span>Eugenesky</span></a>
+                    </p>
                 </div>
             </article>
             <article data-aos="fade-up" data-aos-delay="300" class="gallery-item">
                 <div class="preview">
-                    <img src="img/takeiteasy.png" alt="">
+                    <img src="img/items/out-cast.png" alt="" />
                     <div class="overlay">
                         <i class="icon-like"></i>
                         <a href="item.html" class="primary-btn">Voir le produit</a>
@@ -296,16 +342,18 @@
                     </div>
                 </div>
                 <div class="infos">
-                    <p>Take it easy</p>
+                    <p>Out Cast</p>
                     <p>25€</p>
                 </div>
                 <div class="author">
-                    <p>by <span>Eugenesky</span></p>
+                    <p>
+                        by <a href=""><span>John Wayne</span></a>
+                    </p>
                 </div>
             </article>
             <article data-aos="fade-up" data-aos-delay="300" class="gallery-item">
                 <div class="preview">
-                    <img src="img/takeiteasy.png" alt="">
+                    <img src="img/items/peaceforever.png" alt="" />
                     <div class="overlay">
                         <i class="icon-like"></i>
                         <a href="item.html" class="primary-btn">Voir le produit</a>
@@ -313,20 +361,23 @@
                     </div>
                 </div>
                 <div class="infos">
-                    <p>Take it easy</p>
+                    <p>Peace Forever</p>
                     <p>25€</p>
                 </div>
                 <div class="author">
-                    <p>by <span>Eugenesky</span></p>
+                    <p>
+                        by <a href=""><span>Pakalupapito</span></a>
+                    </p>
                 </div>
             </article>
             <article data-aos="fade-up" data-aos-delay="300" class="gallery-item">
                 <div class="preview">
-                    <img src="img/takeiteasy.png" alt="">
+                    <img src="img/items/takeiteasy.png" alt="" />
                     <div class="overlay">
                         <i class="icon-like"></i>
                         <a href="item.html" class="primary-btn">Voir le produit</a>
                         <a href="paiement.html" class="secondary-btn">Ajouter au panier</a>
+
                     </div>
                 </div>
                 <div class="infos">
@@ -334,12 +385,14 @@
                     <p>25€</p>
                 </div>
                 <div class="author">
-                    <p>by <span>Eugenesky</span></p>
+                    <p>
+                        by <a href=""><span>Eugenesky</span></a>
+                    </p>
                 </div>
             </article>
             <article data-aos="fade-up" data-aos-delay="300" class="gallery-item">
                 <div class="preview">
-                    <img src="img/takeiteasy.png" alt="">
+                    <img src="img/items/out-cast.png" alt="" />
                     <div class="overlay">
                         <i class="icon-like"></i>
                         <a href="item.html" class="primary-btn">Voir le produit</a>
@@ -347,16 +400,18 @@
                     </div>
                 </div>
                 <div class="infos">
-                    <p>Take it easy</p>
+                    <p>Out Cast</p>
                     <p>25€</p>
                 </div>
                 <div class="author">
-                    <p>by <span>Eugenesky</span></p>
+                    <p>
+                        by <a href=""><span>John Wayne</span></a>
+                    </p>
                 </div>
             </article>
             <article data-aos="fade-up" data-aos-delay="300" class="gallery-item">
                 <div class="preview">
-                    <img src="img/takeiteasy.png" alt="">
+                    <img src="img/items/peaceforever.png" alt="" />
                     <div class="overlay">
                         <i class="icon-like"></i>
                         <a href="item.html" class="primary-btn">Voir le produit</a>
@@ -364,20 +419,23 @@
                     </div>
                 </div>
                 <div class="infos">
-                    <p>Take it easy</p>
+                    <p>Peace Forever</p>
                     <p>25€</p>
                 </div>
                 <div class="author">
-                    <p>by <span>Eugenesky</span></p>
+                    <p>
+                        by <a href=""><span>Pakalupapito</span></a>
+                    </p>
                 </div>
             </article>
             <article data-aos="fade-up" data-aos-delay="300" class="gallery-item">
                 <div class="preview">
-                    <img src="img/takeiteasy.png" alt="">
+                    <img src="img/items/takeiteasy.png" alt="" />
                     <div class="overlay">
                         <i class="icon-like"></i>
                         <a href="item.html" class="primary-btn">Voir le produit</a>
                         <a href="paiement.html" class="secondary-btn">Ajouter au panier</a>
+
                     </div>
                 </div>
                 <div class="infos">
@@ -385,12 +443,14 @@
                     <p>25€</p>
                 </div>
                 <div class="author">
-                    <p>by <span>Eugenesky</span></p>
+                    <p>
+                        by <a href=""><span>Eugenesky</span></a>
+                    </p>
                 </div>
             </article>
             <article data-aos="fade-up" data-aos-delay="300" class="gallery-item">
                 <div class="preview">
-                    <img src="img/takeiteasy.png" alt="">
+                    <img src="img/items/out-cast.png" alt="" />
                     <div class="overlay">
                         <i class="icon-like"></i>
                         <a href="item.html" class="primary-btn">Voir le produit</a>
@@ -398,16 +458,18 @@
                     </div>
                 </div>
                 <div class="infos">
-                    <p>Take it easy</p>
+                    <p>Out Cast</p>
                     <p>25€</p>
                 </div>
                 <div class="author">
-                    <p>by <span>Eugenesky</span></p>
+                    <p>
+                        by <a href=""><span>John Wayne</span></a>
+                    </p>
                 </div>
             </article>
             <article data-aos="fade-up" data-aos-delay="300" class="gallery-item">
                 <div class="preview">
-                    <img src="img/takeiteasy.png" alt="">
+                    <img src="img/items/peaceforever.png" alt="" />
                     <div class="overlay">
                         <i class="icon-like"></i>
                         <a href="item.html" class="primary-btn">Voir le produit</a>
@@ -415,20 +477,23 @@
                     </div>
                 </div>
                 <div class="infos">
-                    <p>Take it easy</p>
+                    <p>Peace Forever</p>
                     <p>25€</p>
                 </div>
                 <div class="author">
-                    <p>by <span>Eugenesky</span></p>
+                    <p>
+                        by <a href=""><span>Pakalupapito</span></a>
+                    </p>
                 </div>
             </article>
             <article data-aos="fade-up" data-aos-delay="300" class="gallery-item">
                 <div class="preview">
-                    <img src="img/takeiteasy.png" alt="">
+                    <img src="img/items/takeiteasy.png" alt="" />
                     <div class="overlay">
                         <i class="icon-like"></i>
                         <a href="item.html" class="primary-btn">Voir le produit</a>
                         <a href="paiement.html" class="secondary-btn">Ajouter au panier</a>
+
                     </div>
                 </div>
                 <div class="infos">
@@ -436,12 +501,14 @@
                     <p>25€</p>
                 </div>
                 <div class="author">
-                    <p>by <span>Eugenesky</span></p>
+                    <p>
+                        by <a href=""><span>Eugenesky</span></a>
+                    </p>
                 </div>
             </article>
             <article data-aos="fade-up" data-aos-delay="300" class="gallery-item">
                 <div class="preview">
-                    <img src="img/takeiteasy.png" alt="">
+                    <img src="img/items/out-cast.png" alt="" />
                     <div class="overlay">
                         <i class="icon-like"></i>
                         <a href="item.html" class="primary-btn">Voir le produit</a>
@@ -449,16 +516,18 @@
                     </div>
                 </div>
                 <div class="infos">
-                    <p>Take it easy</p>
+                    <p>Out Cast</p>
                     <p>25€</p>
                 </div>
                 <div class="author">
-                    <p>by <span>Eugenesky</span></p>
+                    <p>
+                        by <a href=""><span>John Wayne</span></a>
+                    </p>
                 </div>
             </article>
             <article data-aos="fade-up" data-aos-delay="300" class="gallery-item">
                 <div class="preview">
-                    <img src="img/takeiteasy.png" alt="">
+                    <img src="img/items/peaceforever.png" alt="" />
                     <div class="overlay">
                         <i class="icon-like"></i>
                         <a href="item.html" class="primary-btn">Voir le produit</a>
@@ -466,118 +535,18 @@
                     </div>
                 </div>
                 <div class="infos">
-                    <p>Take it easy</p>
+                    <p>Peace Forever</p>
                     <p>25€</p>
                 </div>
                 <div class="author">
-                    <p>by <span>Eugenesky</span></p>
-                </div>
-            </article>
-            <article data-aos="fade-up" data-aos-delay="300" class="gallery-item">
-                <div class="preview">
-                    <img src="img/takeiteasy.png" alt="">
-                    <div class="overlay">
-                        <i class="icon-like"></i>
-                        <a href="item.html" class="primary-btn">Voir le produit</a>
-                        <a href="paiement.html" class="secondary-btn">Ajouter au panier</a>
-                    </div>
-                </div>
-                <div class="infos">
-                    <p>Take it easy</p>
-                    <p>25€</p>
-                </div>
-                <div class="author">
-                    <p>by <span>Eugenesky</span></p>
-                </div>
-            </article>
-            <article data-aos="fade-up" data-aos-delay="300" class="gallery-item">
-                <div class="preview">
-                    <img src="img/takeiteasy.png" alt="">
-                    <div class="overlay">
-                        <i class="icon-like"></i>
-                        <a href="item.html" class="primary-btn">Voir le produit</a>
-                        <a href="paiement.html" class="secondary-btn">Ajouter au panier</a>
-                    </div>
-                </div>
-                <div class="infos">
-                    <p>Take it easy</p>
-                    <p>25€</p>
-                </div>
-                <div class="author">
-                    <p>by <span>Eugenesky</span></p>
-                </div>
-            </article>
-            <article data-aos="fade-up" data-aos-delay="300" class="gallery-item">
-                <div class="preview">
-                    <img src="img/takeiteasy.png" alt="">
-                    <div class="overlay">
-                        <i class="icon-like"></i>
-                        <a href="item.html" class="primary-btn">Voir le produit</a>
-                        <a href="paiement.html" class="secondary-btn">Ajouter au panier</a>
-                    </div>
-                </div>
-                <div class="infos">
-                    <p>Take it easy</p>
-                    <p>25€</p>
-                </div>
-                <div class="author">
-                    <p>by <span>Eugenesky</span></p>
-                </div>
-            </article>
-            <article data-aos="fade-up" data-aos-delay="300" class="gallery-item">
-                <div class="preview">
-                    <img src="img/takeiteasy.png" alt="">
-                    <div class="overlay">
-                        <i class="icon-like"></i>
-                        <a href="item.html" class="primary-btn">Voir le produit</a>
-                        <a href="paiement.html" class="secondary-btn">Ajouter au panier</a>
-                    </div>
-                </div>
-                <div class="infos">
-                    <p>Take it easy</p>
-                    <p>25€</p>
-                </div>
-                <div class="author">
-                    <p>by <span>Eugenesky</span></p>
-                </div>
-            </article>
-            <article data-aos="fade-up" data-aos-delay="300" class="gallery-item">
-                <div class="preview">
-                    <img src="img/takeiteasy.png" alt="">
-                    <div class="overlay">
-                        <i class="icon-like"></i>
-                        <a href="item.html" class="primary-btn">Voir le produit</a>
-                        <a href="paiement.html" class="secondary-btn">Ajouter au panier</a>
-                    </div>
-                </div>
-                <div class="infos">
-                    <p>Take it easy</p>
-                    <p>25€</p>
-                </div>
-                <div class="author">
-                    <p>by <span>Eugenesky</span></p>
-                </div>
-            </article>
-            <article data-aos="fade-up" data-aos-delay="300" class="gallery-item">
-                <div class="preview">
-                    <img src="img/takeiteasy.png" alt="">
-                    <div class="overlay">
-                        <i class="icon-like"></i>
-                        <a href="item.html" class="primary-btn">Voir le produit</a>
-                        <a href="paiement.html" class="secondary-btn">Ajouter au panier</a>
-                    </div>
-                </div>
-                <div class="infos">
-                    <p>Take it easy</p>
-                    <p>25€</p>
-                </div>
-                <div class="author">
-                    <p>by <span>Eugenesky</span></p>
+                    <p>
+                        by <a href=""><span>Pakalupapito</span></a>
+                    </p>
                 </div>
             </article>
         </section>
     </main>
-    </div>
+    <script src="scripts/main.js"></script>
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script>
         AOS.init();
